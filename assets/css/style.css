@@ -1,0 +1,868 @@
+body {
+  overflow-x: hidden;
+}
+body ::-webkit-scrollbar {
+  font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro'), url('../fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.ttf') format('ttf');
+}
+
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins-Medium'), url('../fonts/Poppins/Poppins-Medium.ttf') format('woff');
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins-Bold'), url('../fonts/Poppins/Poppins-Bold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins-ExtraBold'), url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('woff');
+}
+@font-face {
+  font-family: "Poppins-Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local('Poppins-Black'), url('../fonts/Poppins/Poppins-Black.ttf') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('../fonts/Satoshi-Variable.woff') format('woff'),
+       url('../fonts/Satoshi-Variable.ttf') format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('../fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+       url('../fonts/Satoshi-VariableItalic.woff') format('woff'),
+       url('../fonts/Satoshi-VariableItalic.ttf') format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url('../fonts/Satoshi-Light.woff2') format('woff2'),
+       url('../fonts/Satoshi-Light.woff') format('woff'),
+       url('../fonts/Satoshi-Light.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-LightItalic';
+  src: url('../fonts/Satoshi-LightItalic.woff2') format('woff2'),
+       url('../fonts/Satoshi-LightItalic.woff') format('woff'),
+       url('../fonts/Satoshi-LightItalic.ttf') format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('../fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('../fonts/Satoshi-Regular.woff') format('woff'),
+       url('../fonts/Satoshi-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src: url('../fonts/Satoshi-Italic.woff2') format('woff2'),
+       url('../fonts/Satoshi-Italic.woff') format('woff'),
+       url('../fonts/Satoshi-Italic.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('../fonts/Satoshi-Medium.woff') format('woff'),
+       url('../fonts/Satoshi-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-MediumItalic';
+  src: url('../fonts/Satoshi-MediumItalic.woff2') format('woff2'),
+       url('../fonts/Satoshi-MediumItalic.woff') format('woff'),
+       url('../fonts/Satoshi-MediumItalic.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('../fonts/Satoshi-Bold.woff') format('woff'),
+       url('../fonts/Satoshi-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src: url('../fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+       url('../fonts/Satoshi-BoldItalic.woff') format('woff'),
+       url('../fonts/Satoshi-BoldItalic.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Black';
+  src: url('../fonts/Satoshi-Black.woff2') format('woff2'),
+       url('../fonts/Satoshi-Black.woff') format('woff'),
+       url('../fonts/Satoshi-Black.ttf') format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BlackItalic';
+  src: url('../fonts/Satoshi-BlackItalic.woff2') format('woff2'),
+       url('../fonts/Satoshi-BlackItalic.woff') format('woff'),
+       url('../fonts/Satoshi-BlackItalic.ttf') format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: italic;
+}
+.h1, h1, .h2, h2, .h3, h3, .h4, h4,.h5, h5 {
+	font-family: 'Satoshi-Bold';
+}
+
+p {
+    font-family: 'Satoshi-Regular';
+}
+/*accordion-hover*/
+.accordion-hover li {
+  display: block;
+}
+
+.accordion-hover li a {
+  display: flex;
+  justify-content: space-between;
+  min-height: 46px;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+
+}
+
+.accordion-hover li a i {
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.accordion-hover li a:hover i {
+  font-size: 22px;
+}
+
+.accordion-hover li a:after {
+  content: '\f178';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #000;
+  border-radius: 100px;
+  left: 35%;
+  opacity: 0;
+  transition: all 0.3s;
+  font-family: FontAwesome;
+  color: #fff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.accordion-hover li a:hover:after {
+  opacity: 1;
+}
+/* ------ HEADER-CSS-START  ------ */
+header .nav-link {
+    display: block;
+    padding: 10px 20px  !important;
+    font-size: 14px;
+    color: #000 !important;
+}
+
+.dropbtn {
+  border: none;
+  background: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+  padding: 6px 0 0 0;
+}
+
+.dropdown-content a {
+padding: 0 16px 8px;
+text-decoration: none;
+display: block;
+font-size: 13px;
+color: #000;
+}
+header .nav-link span.material-icons-outlined {
+  vertical-align: sub;
+  font-size: 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+header .nav-link.active {
+  color: #04b100 !important;
+  font-weight: 600;
+}
+header .nav-link:hover {
+  color: #04b100 !important;
+}
+.right-navbar {
+    margin: 10px 0;
+}
+header .nav-link.orng-btn {
+  background: #FFA304;
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 10px 26px !IMPORTANT;
+}
+header.fixed-top {
+  background: #fff;
+}
+
+.header-bar {
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  right: 0;
+}
+
+.header-bar button {
+  background:transparent;
+  border:none;
+  width:30px;
+  height:30px;
+  cursor:pointer; 
+  outline:0;
+}
+
+.toggle span {
+  width:100%;
+  height:3px;
+  background:#555;
+  display:block;
+  position:relative;
+  coursor:pointer;
+}
+
+.toggle span:before,
+.toggle span:after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#555;
+  transition: all 0.3s ease-out;
+}
+
+.toggle span:before {
+  top:-8px;
+}
+
+.toggle span:after {
+  top:8px;
+}
+
+.toggle span.toggle {
+  background:transparent;
+}
+
+.toggle span.toggle:before {
+  top:0;
+  transform:rotate(-45deg);
+  background:#fff;
+  
+}
+
+.toggle span.toggle:after {
+  top:0;
+  transform:rotate(45deg);
+  background:#fff;
+}
+
+.sidemenu {
+  background: #161616;
+  width: 500px;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  height: 500px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+  padding-top: 90px;
+  transition: all 0.3s ease-out;
+}
+.sidemenu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-content p {
+  color: #656565;
+  margin-bottom: 0;
+}
+.menu-content address {
+  color: #fff;
+}
+.sidemenu ul li {
+  display:block;
+}
+
+.sidemenu ul li a {
+  padding:8px 15px;
+  font-size:16px;
+  color: #fff;
+  font-family:arial;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:all 0.3s ease-out;
+  font-weight:500;
+}
+
+
+
+.sidemenu ul li a:hover:before {
+  width:100%;
+}
+
+.sidemenushow {
+  right: 0;
+}
+.header-icons li a {
+  color: hsl(0deg 0% 100% / 53%);
+}
+/* ------ HEADER-CSS-END  ------ */
+/* ========= HOME-PAGE-CSS-START  =========*/
+
+.review {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+.name{
+  font-size: 18px;
+  color: #c1e718;
+  margin: 0;
+}
+.job{
+  color: #c8c8c8;
+  font-size: 14px;
+}
+.carousel-inner{
+  max-width: 100%;
+}
+.fa-minus {
+  font-size: 14px;
+}
+.carousel-indicators {
+  bottom: -20px;
+  right: 0;
+  margin: 0;
+}
+
+.carousel-indicators [data-bs-target ] {
+  height: 10px;
+  border: 2px solid black;
+  width: 10px;
+  background-color: inherit;
+  border-radius: 50%;
+}
+.carousel-indicators .active{
+  border: 2px solid transparent;
+  background-color:#c1e718;
+}
+.left{
+  color: rgb(20, 20, 20);
+  font-weight: 600;
+}
+.right{
+  color: rgb(12, 12, 12);
+  font-weight: 600;
+}
+.carousel-control-next, .carousel-control-prev {
+  position: relative;
+
+}
+.testimonials-bg .carousel-control-prev {
+  left: 40%;
+  top: -30px;
+}
+.testimonials-bg .carousel-control-next {
+  left: 48%;
+  top: -70px;
+}
+.testimonials-bg img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+}
+.testi-content {
+  margin: 0 0 0 52px;
+}
+.testimonials-bg .carousel-control-next, 
+.testimonials-bg .carousel-control-prev {
+  position: relative;
+  border: 1px solid #CCCCCC;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.outline-btn {
+  color: #000;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #818181;
+  margin: 10px;
+  border-radius: 50px;
+  background: transparent;
+      font-family: 'Satoshi-Regular';
+}
+.btn-outline {
+  border: 1px solid #ccc;
+  width: 50%;
+  margin: 22px auto;
+  border-radius: 50px;
+  padding: 10px 0;
+  background: transparent;
+}
+
+.expert-sec .row.border {
+    border-radius: 20px;
+}
+
+.expert-sec .imgBox.border.p-5 {
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-radius: 20px;
+}
+.storyStep.border {
+    border-radius: 20px;
+}
+.team-slide .imgBox {
+    border: 2px solid #000000 !important;
+    border-radius: 17px;
+}
+.team-slide .imgBox img{
+  width:100%;
+}
+
+.team-slide span {
+    background: #C8E1FF;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 25px;
+    border-radius: 30px;
+}
+
+.team-slide span.bg1 {
+	background: #C8E1FF;
+}
+.team-slide span.bg2 {
+	background:  #F0C4FF;
+}
+.team-slide span.bg3 {
+	background:  #FFF7AB;
+}
+.together-section h1{
+	font-size:40px;
+}
+@media (max-width:560px) {
+  .review{
+      font-size: 14px;
+      font-weight: 600;
+  }
+  .name{
+      font-size: 13px;
+  }
+  .job{
+      font-size: 10px;
+  }
+  .right{
+      font-size: 12px;
+  }
+  .left{
+      font-size: 12px;
+  }
+  .carousel-indicators [data-bs-target ] {
+      height: 8px;
+      border: 1px solid black;
+      width: 8px;
+      background-color: inherit;
+      border-radius: 50%;
+  }
+  .carousel-indicators .active{
+      border: 1px solid transparent;
+      background-color:#c1e718;
+  }
+}
+.actions-bg .nav-pills .nav-link.active, .actions-bg .nav-pills .show>.nav-link {
+  color: #000;
+  background-color: transparent;
+  border-bottom: 1.4px solid;
+  border-radius: 0;
+}
+.actions-bg .nav-pills .nav-link{
+  color: #000;
+}
+.hero-wrapper {
+  padding: 200px 0 180px 0;
+  background: url(../images/banner-shape.png);
+  background-size: 100% 100%;
+  background-position: right center;
+}
+.quick-box.border {
+     border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    width: 80%;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recent-box {
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  text-align: center;
+  height: 100%;
+}
+.recent-box img {
+    width: 40%;
+}
+.home-services-tabs .tab-content {
+    background: #FBFBFB;
+    border-radius: 10px;
+    padding: 80px 30px;
+	width: 100%;
+    height: 100%;
+}
+.home-services-tabs div#v-pills-tab > button {
+    width: 180px;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 40px;
+	position:relative;
+	    font-family: 'Satoshi-Regular';
+}
+.home-services-tabs div#v-pills-tab > button.nav-link.active:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    bottom: -1px;
+    right: -20px;
+}
+.services-link-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+.services-link-list ul li a span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #dee2e6;
+    display: inline-block;
+    padding-right: 50px;
+}
+.services-link-list ul li a {
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 41px;
+	font-family: 'Satoshi-Regular';
+	position:relative;
+}
+.services-link-list ul li a i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.view-call {
+    font-family: 'Satoshi-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 34px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000;
+}
+.prodfoot-list li a {
+    font-family: 'Satoshi-Regular';
+    color: #000 !important;
+}
+.lets-btn {
+    background: #000000;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Satoshi-Regular';
+}
+.prodfoot-list img {
+    margin-bottom: 40px;
+}
+.prodfoot-list h5 {
+    margin-bottom: 30px;
+}
+.close-btn{
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.cb-featured-more.text-left {
+    text-align: left;
+}
+.imgBox.border {
+    border-radius: 20px;
+	overflow: hidden;
+}
+.imgBox.border img {
+    width: 100%;
+}
+.imgBox.border.bgCstm {
+    background: #D2EEFF;
+}
+.row.cstm-m {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+section.techno-used img {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #EAEAEA;
+    object-fit: contain;
+    padding: 70px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+/* ========= HOME-PAGE-CSS-END  =========*/
+/* ========= MAIN-commanserv-MARKETING-PAGE-CSS-END  =========*/
+/* ======== FOOTER-CSS-START ======= */
+footer {
+  background: #F9F9F9;
+  padding: 60px 0;
+}
+.subscribe-bg .input-group-text {
+  padding: 10px;
+  background-color: #3EA70D;
+  border: 1px solid #3EA70D;
+  height: 46px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  color: #fff;
+}
+.foot-clr {
+  font-size: 14px;
+  margin-top: 20px;
+}
+/* ======== FOOTER-CSS-END ======= */
+
+/*tabs*/
+
+ul#pills-tab .nav-item {
+    display: block;
+    width: 33.33%;
+    text-align: center;
+}
+ul#pills-tab {
+    text-align: center;
+	background: #F4F4F4;
+	border-radius: 10px;
+}
+ul#pills-tab .nav-item button {
+    width: 100%;
+    padding: 15px;
+    color: #000;
+    font-family: 'Satoshi-Regular';
+    font-size: 18px;
+}
+ul#pills-tab .nav-item button.active {
+    background: transparent;
+    color: #8151FF;
+    font-weight: bold;
+}
+section.we-expert-section .row.border {
+    border-radius: 20px;
+}
+
+
+section.we-expert-section .imgBox.border{
+	padding:100px;
+}
+section.we-expert-section .imgBox.border {
+    padding: 100px;
+    background: linear-gradient(90deg, #E2D7FF 20px, transparent 1%) center, linear-gradient(#E2D7FF 20px, transparent 1%) center, #fff;
+    background-size: 22px 22px;
+}
+/*end tabs*/
+.we-help-sec .borderBox.border {
+    border: 1px solid #DEDEDE !important;
+    border-radius: 20px;
+}
+
+.what-say-slide {
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+.what-say-slider {
+    padding: 0 50px;
+}
+ul.port-features {
+    padding-left: 0;
+    list-style: none;
+}
+ul.port-features li {
+    display: inline-block;
+    padding: 7px 21px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-family: 'Satoshi-Bold';
+}
+.portfolio-box img {
+    width: 100%;
+}
+/* ------ RESPOSNIVE-CSS-START ------- */
+
+@media (max-width:1199.98px) {
+ 
+}
+@media (max-width: 991.98px) {
+  .testi-content{
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .testimonials-bg img {
+    width: 100%;
+    height: 160px;
+    object-fit: fill;
+}
+.testimonials-bg .carousel-control-prev {
+  left: 40%;
+  top: 0;
+}
+.testimonials-bg .carousel-control-next {
+  left: 52%;
+  top: -40px;
+}
+.recentclient-bg .col-md-4 {
+  margin: 0 0 30px 0;
+}
+.quick-inner .col-md-4 {
+  margin: 0 0 60px 0;
+}
+footer {
+  background: #F9F9F9;
+  padding: 0;
+}
+
+  
+}
+@media (max-width:590px){
+ 
+}
+@media (max-width:390px) {
+ 
+}
+/* ------ RESPOSNIVE-CSS-END ------- */

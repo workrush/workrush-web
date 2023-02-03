@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon-16x16.png" rel="icon" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/sofiapro-light.otf" rel="stylesheet">
+    <link href="assets/css/material_fonts.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="assets/fonts/font-awesome.min.css" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <title>About Us</title>
+</head>
+<body>
+    <main>
+        <!------ HEADER-SECTION-START ------>
+        <header class="fixed-top  navbar-expand-lg navbar-light">
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="home.html" class="nav-item nav-link ">Home </a>
+                            <a href="#" class="nav-item nav-link">Services</a>
+                            <a href="#" class="nav-item nav-link">Contact us</a>
+                            <a href="#" class="nav-item nav-link">Request call back</a>
+                        </div>
+                        <div class="navbar-nav ms-auto right-navbar">
+                            <!--<div class="header-bar">
+                                <div class="header_in">
+                                  <button type="button" class="toggle" id="toggle">
+                                    <span></span>
+                                   </button>
+                               </div>
+                            </div>-->
+                            <div class="header__menu char-hover" onclick="addclaassmenu()">
+                                <svg class="header__menu-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__menu-icon-item" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" y="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" y="16" width="5" height="5" rx="2.5"/>
+                                </svg>
+
+                                <div class="header__menu-text">
+                                    <div class="char-hover__item toggle" id="toggle">
+                                        menu
+                                    </div>
+                                </div>
+                            </div>
+                             
+                             <div class="sidemenu" id='sidemenu'>
+                                 <span class="close-btn" onclick="removeclaassmenu()"><i class="fa fa-close" aria-hidden="true"></i></span>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <ul class="header-icons">
+                                            <li>
+                                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <ul class="menu-open">
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">About US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Career</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Services</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Contact US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Get Quick Quote</a>
+                                            </li>
+                                        </ul>
+                                        <div class="menu-content">
+                                            <p>Contact US</p>
+                                            <ul class="list-unstyled">
+                                                <li class="d-inline-block">
+                                                    <a href="tel:+44-74332-45632">+44-74332-45632</a>
+                                                </li>
+                                                <li class="d-inline-block">
+                                                    <a href="#">info@workrush.in</a>
+                                                </li>
+                                            </ul>
+                                            <p>Address</p>
+                                            <address>15 Wood Street London, KT1 1TY, United Kingdom</address>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!------ HEADER-SECTION-END ------>
+        <!------ HERO-SECTION-START ------>
+        <section class="hero-wrapper mb-5">
+            <div class="container">
+                <div class="text-center">
+                    <h2>We’re tribe of creative Problem solvers!</h2>
+                    <div class="cb-featured-more">
+                        <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Let’s Connect <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------ HERO-SECTION-END ------>
+        
+        
+        <section class="quick-bg expert-sec mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">What we are expert in</h2>
+               
+                    <div class="row border">
+                        <div class="col-md-6 align-self-center">
+                           <div class="txtBox  p-5 ">
+							<h3 class="mb-3">We help business grow online</h3>
+							<p class="mb-3">Augmented reality (AR) is the integration of digital information with the user's environment in real time. Unlike virtual reality (VR), which creates a totally artificial environment.</p>
+							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Services <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+						   </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="imgBox border p-5">
+                                <img class="img-fluid" src="assets/images/rocket-img.png" alt="">
+                            </div>
+                        </div>
+                      
+                    </div>
+              
+            </div>
+        </section>
+		
+		
+		   <section class="story-section mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Story of workrush!</h2>
+               
+                    <div class="row">
+                        <div class="col-md-7 align-self-center">
+                           <div class="storyStep  border p-5 mb-5">
+							<h3 class="mb-3">Ideation <span>2019</span></h3>
+							<p>Started Work Rush and registered this domain</p>
+						   </div>
+                        </div>
+						<div class="col-md-5"> </div>
+                    </div>
+					
+					<div class="row">
+						<div class="col-md-5"> </div>
+                        <div class="col-md-7 align-self-center">
+                           <div class="storyStep border p-5 mb-5 mt-5">
+								<div class="innserStoryStep mb-5">
+									<h3 class="mb-2">Formalization <span>2020</span></h3>
+									<p>Touched the first milestone by getting enlisted with MCA India legally</p>
+							    </div>
+								<div class="innserStoryStep mb-5">
+									<h3 class="mb-2">Client Acquisition</h3>
+									<p>Bagged out first big client with our unique Healthcare platform</p>
+							    </div>
+								<div class="innserStoryStep mb-5">
+									<h3 class="mb-2">Going Global</h3>
+									<p>Established our presence internationally with our first international touchdown in the UK, followed by Australia and Canada. </p>
+							    </div>
+								<div class="innserStoryStep mb-5">
+									<h3 class="mb-2">Spiderweb</h3>
+									<p>Acquired the UK and Canadian domain , marking the presence in the region</p>
+							    </div>
+						   </div>
+                        </div>
+						
+                    </div>
+					
+					
+					   <div class="row">
+                        <div class="col-md-7 align-self-center">
+                           <div class="storyStep  border p-5 mb-5 mt-5">
+							<h3 class="mb-3">Growth Strategy <span>2019</span></h3>
+							<p>Bagged a a couple of prestigious clients with Ministry of Defence, Klere Air, DigiSwasth, and many more.</p>
+						   </div>
+                        </div>
+						<div class="col-md-5"> </div>
+                    </div>
+              
+            </div>
+        </section>
+		
+		     <section class="team-section mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Our Team!</h2>
+               
+                    <div class="team-slider">
+                        <div class="team-slide text-center  m-5">
+							<div class="imgBox p-4 mb-4 border">
+								<img src="assets/images/team1.png" class="mx-auto">
+							</div>
+							<h4>Ronny Doe</h4>
+							<span class="bg1">VP of design</span>
+                        </div>
+						<div class="team-slide text-center  m-5">
+							<div class="imgBox p-4 mb-4 border">
+								<img src="assets/images/team2.png" class="mx-auto">
+							</div>
+							<h4>Deepankar Mathur</h4>
+							<span class="bg2">Founder & CEO</span>
+                        </div>
+						<div class="team-slide text-center  m-5">
+							<div class="imgBox p-4 mb-4 border">
+								<img src="assets/images/team3.png" class="mx-auto">
+							</div>
+							<h4>Mark Enderson</h4>
+							<span class="bg3">Project Manager</span>
+                        </div>
+						<div class="team-slide text-center m-5">
+							<div class="imgBox p-4 mb-4 border">
+								<img src="assets/images/team1.png" class="mx-auto">
+							</div>
+							<h4>Ronny Doe</h4>
+							<span class="bg1">VP of design</span>
+                        </div>
+                    </div>
+              
+            </div>
+        </section>
+		
+		  <section class="together-section mb-5 pt-5 text-center"> 
+            <div class="container">
+                <h1 class="text-center mb-5">Let’s create miracle together!</h1>
+               
+                 <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">get in touch <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+              
+            </div>
+        </section>
+     
+		
+		 <section class="actionbottom-bg mb-5 services-link-list pt-5 pb-5">
+            <div class="container">
+				<ul class="accordion-hover">
+					<li><a href="#"><span>01</span>Website Developement <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
+					<li><a href="#"><span>02</span>App Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>03</span>Game Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>04</span>Digital Marketing <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>05</span>Web3 Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+				</ul>
+			</div>
+		</section>
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="">
+                            <p><strong>Have Project In mind</strong></p>
+							<a href="#" class="lets-btn">Let’s connect</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Services</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Web developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">App Developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Digital Marketing</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Web 3.0 developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Content Creation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Career</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Blogs</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">About US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Contact US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Case Studies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Linkedin</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Facebook</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Instagram</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Reddit</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        <!------ FOOTER-SECTION-END ------>
+        
+    </main>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Counts JS -->
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/btn.js"></script>
+    <script>
+        /*var btn = document.querySelector('.toggle');
+var btnst = true;
+btn.onclick = function() {
+  if(btnst == true) {
+    document.querySelector('.toggle span').classList.add('toggle');
+    document.getElementById('sidemenu').classList.add('sidemenushow');
+    btnst = false;
+  }else if(btnst == false) {
+    document.querySelector('.toggle span').classList.remove('toggle');
+    document.getElementById('sidemenu').classList.remove('sidemenushow');
+    btnst = true;
+  }
+}*/
+        
+   function addclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.add("sidemenushow");
+} 
+           function removeclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.remove("sidemenushow");
+} 
+    </script>
+	
+	<script>
+	jQuery('.team-slider').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+	   dots: true,
+	infinite: true,
+	});
+	</script>
+</body>
+
+</html>

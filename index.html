@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon-16x16.png" rel="icon" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/sofiapro-light.otf" rel="stylesheet">
+    <link href="assets/css/material_fonts.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="assets/fonts/font-awesome.min.css" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <!------ HEADER-SECTION-START ------>
+        <header class="fixed-top  navbar-expand-lg navbar-light">
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="home.html" class="nav-item nav-link ">Home </a>
+                            <a href="#" class="nav-item nav-link">Services</a>
+                            <a href="#" class="nav-item nav-link">Contact us</a>
+                            <a href="#" class="nav-item nav-link">Request call back</a>
+                        </div>
+                        <div class="navbar-nav ms-auto right-navbar">
+                            <!--<div class="header-bar">
+                                <div class="header_in">
+                                  <button type="button" class="toggle" id="toggle">
+                                    <span></span>
+                                   </button>
+                               </div>
+                            </div>-->
+                            <div class="header__menu char-hover" onclick="addclaassmenu()">
+                                <svg class="header__menu-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__menu-icon-item" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" y="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" y="16" width="5" height="5" rx="2.5"/>
+                                </svg>
+
+                                <div class="header__menu-text">
+                                    <div class="char-hover__item toggle" id="toggle">
+                                        menu
+                                    </div>
+                                </div>
+                            </div>
+                             
+                             <div class="sidemenu" id='sidemenu'>
+                                 <span class="close-btn" onclick="removeclaassmenu()"><i class="fa fa-close" aria-hidden="true"></i></span>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <ul class="header-icons">
+                                            <li>
+                                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <ul class="menu-open">
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">About US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Career</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Services</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Contact US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Get Quick Quote</a>
+                                            </li>
+                                        </ul>
+                                        <div class="menu-content">
+                                            <p>Contact US</p>
+                                            <ul class="list-unstyled">
+                                                <li class="d-inline-block">
+                                                    <a href="tel:+44-74332-45632">+44-74332-45632</a>
+                                                </li>
+                                                <li class="d-inline-block">
+                                                    <a href="#">info@workrush.in</a>
+                                                </li>
+                                            </ul>
+                                            <p>Address</p>
+                                            <address>15 Wood Street London, KT1 1TY, United Kingdom</address>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!------ HEADER-SECTION-END ------>
+        <!------ HERO-SECTION-START ------>
+        <section class="hero-wrapper mb-5">
+            <div class="container">
+                <div class="text-center">
+                    <h2><b>One Stop Solution</b> for your online business</h2>
+                    <div class="cb-featured-more">
+                        <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Estimate your project">Estimate your project</span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------ HERO-SECTION-END ------>
+        <!------ LOGO-SECTION-START ------>
+        <section class="logo-bg mb-5">
+            <div class="container-fluid">
+                <div class="row align-items-center text-center">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="assets/images/microsoft-ic.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="assets/images/apple-ic.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="assets/images/google-ic.png" alt="">
+                    </div>
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="assets/images/amazon-ic.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------ LOGO-SECTION-END ------>
+        <!------ QUICK-QUOTE-SECTION-START  ------>
+        <section class="quick-bg mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Let’s get a quick quote!</h2>
+                <div class="quick-inner">
+                    <div class="row  text-center">
+                        <div class="col-md-4">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class=" mb-0">Application</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class=" mb-0">Website</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/game-img.png" alt="">
+                            </div>
+                            <h5 class="mb-0">Game</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------ QUICK-QUOTE-SECTION-END  ------>
+        <!------ ACTIONS-SECTION-START ------>
+        <section class="actions-bg mb-5 pt-5 home-services-tabs"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Alright! want to see some real actions?</h2>
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="d-flex align-items-start">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                              <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Mobile App</button>
+                              <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Website</button>
+                              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">AR / VR</button>
+                              <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Game</button>
+                            </div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                              <div class="tab-pane fade  " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+								<div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							  
+							  <div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  
+							  </div>
+                              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+								<div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </section>
+        <!------ ACTIONS-SECTION-END ------>
+     
+		
+		 <section class="actionbottom-bg mb-5 services-link-list pt-5 pb-5">
+            <div class="container">
+				<ul class="accordion-hover">
+					<li><a href="#"><span>01</span>Website Developement <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
+					<li><a href="#"><span>02</span>App Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>03</span>Game Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>04</span>Digital Marketing <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>05</span>Web3 Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+				</ul>
+			</div>
+		</section>
+        <!------ PARTNERS-SECTION-START  ------>
+        <section class="partners-bg mb-5  pt-5 pb-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Our Partners</h2>
+                <div class="row text-center">
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img1.png" alt="">
+                    </div>
+                    <div class="col-6  col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img2.png" alt="">
+                    </div>
+                    <div class="col-6  col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img3.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img4.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img5.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img6.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img7.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img8.png" alt="">
+                    </div>
+                    <div class="col-6 col-md-4 mb-4">
+                        <img class="img-fluid" src="assets/images/partners-img9.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------ PARTNERS-SECTION-END  ------>
+        <!------ RECENT-CLIENTS-SECTION-START  ----->
+        <section class="recentclient-bg-bg mb-5  pt-5 pb-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Our Recent Clients</h2>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="recent-box">
+                            <img class="img-fluid mb-3" src="assets/images/client-img1.png" alt="">
+                            <h4>G10 Assist</h4>
+                            <p class="mb-0">We designed the website and application for G10 Assist which is serving to millions of users.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="recent-box">
+                            <img class="img-fluid mb-3" src="assets/images/client-img2.png" alt="">
+                            <h4>Foot Bus</h4>
+                            <p class="mb-0">We designed the website and application for Foot bus Assist which is serving to millions of users.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="recent-box">
+                            <img class="img-fluid mb-3" src="assets/images/client-img3.png" alt="">
+                            <h4>Reman UK</h4>
+                            <p class="mb-0">We designed the website and application for G10 Assist which is serving to millions of users.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4 ">
+                    <a href="#" class="view-call">view all clients</a>
+                </div>
+            </div>
+        </section>
+        <!------ RECENT-CLIENTS-SECTION-END  ----->
+        <!------ OUR-TESTIMONIALS-SECTION-START ------>
+        <section class="testimonials-bg pt-5 pb-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Recent Clients</h2>
+                <div class="d-flex align-items-center py-5 mh-100 px-5"> 
+                    <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">                            
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-4 col-md-4 col-lg-4">
+                                        <img src="assets/images/nick-img.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8 col-lg-8">
+                                        <div class=" d-flex flex-column justify-content-center testi-content">
+                                            <p class="review">Nick Robinson</p>  
+                                            <p class="job">CTO Microsoft</p>
+                                            <p>The Workrush team is excellent. They put in an incredible amount of effort on our project and delivered something we're really happy with. Would highly recommend.</p>     
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-4 col-md-4 col-lg-4">
+                                        <img src="assets/images/nick-img.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8 col-lg-8">
+                                        <div class=" d-flex flex-column justify-content-center testi-content">
+                                            <p class="review">Nick Robinson</p>  
+                                            <p class="job">CTO Microsoft</p>
+                                            <p>The Workrush team is excellent. They put in an incredible amount of effort on our project and delivered something we're really happy with. Would highly recommend.</p>     
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-4 col-md-4 col-lg-4">
+                                        <img src="assets/images/nick-img.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="col-8 col-md-8 col-lg-8">
+                                        <div class=" d-flex flex-column justify-content-center testi-content">
+                                            <p class="review">Nick Robinson</p>  
+                                            <p class="job">CTO Microsoft</p>
+                                            <p>The Workrush team is excellent. They put in an incredible amount of effort on our project and delivered something we're really happy with. Would highly recommend.</p>     
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev text-decoration-none" href="#mycarousel" role="button" data-bs-slide="prev">
+                            <div class="d-flex flex-column justify-content-center  left"><i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </div> <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next text-decoration-none" href="#mycarousel" role="button" data-bs-slide="next">
+                            <div class="d-flex flex-column justify-content-center right "><i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div> <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!------ FOOTER-SECTION-START ------>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="">
+                            <p><strong>Have Project In mind</strong></p>
+							<a href="#" class="lets-btn">Let’s connect</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Services</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Web developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">App Developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Digital Marketing</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Web 3.0 developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Content Creation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Career</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Blogs</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">About US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Contact US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Case Studies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Linkedin</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Facebook</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Instagram</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Reddit</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        <!------ FOOTER-SECTION-END ------>
+        
+    </main>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Counts JS -->
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/btn.js"></script>
+    <script>
+        /*var btn = document.querySelector('.toggle');
+var btnst = true;
+btn.onclick = function() {
+  if(btnst == true) {
+    document.querySelector('.toggle span').classList.add('toggle');
+    document.getElementById('sidemenu').classList.add('sidemenushow');
+    btnst = false;
+  }else if(btnst == false) {
+    document.querySelector('.toggle span').classList.remove('toggle');
+    document.getElementById('sidemenu').classList.remove('sidemenushow');
+    btnst = true;
+  }
+}*/
+        
+   function addclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.add("sidemenushow");
+} 
+           function removeclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.remove("sidemenushow");
+} 
+    </script>
+</body>
+
+</html>
