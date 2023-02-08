@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon-16x16.png" rel="icon" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/sofiapro-light.otf" rel="stylesheet">
+    <link href="assets/css/material_fonts.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="assets/fonts/font-awesome.min.css" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <title>Career</title>
+</head>
+<body>
+    <main>
+        <!------ HEADER-SECTION-START ------>
+        <header class="fixed-top  navbar-expand-lg navbar-light">
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="index.html" class="nav-item nav-link ">Home </a>
+                            <a href="about-us.html" class="nav-item nav-link ">About Us </a>
+							 <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Services
+							  </a>
+							  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+								<li><a class="dropdown-item" href="app-development.html">App Development</a></li>
+								<li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+								<li><a class="dropdown-item" href="website-designing.html">website-designing</a></li>
+								<li><a class="dropdown-item" href="game-development.html">Game Development</a></li>
+								<li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>\
+							  </ul>
+							</li>
+                            <a href="contact-us.html" class="nav-item nav-link">Contact us</a>
+                            <a href="career.html" class="nav-item nav-link">Career</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-item nav-link">Request call back</a>
+                        </div>
+                        <div class="navbar-nav ms-auto right-navbar">
+                            <!--<div class="header-bar">
+                                <div class="header_in">
+                                  <button type="button" class="toggle" id="toggle">
+                                    <span></span>
+                                   </button>
+                               </div>
+                            </div>-->
+                            <div class="header__menu char-hover" onclick="addclaassmenu()">
+                                <svg class="header__menu-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__menu-icon-item" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" y="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" y="16" width="5" height="5" rx="2.5"/>
+                                </svg>
+
+                                <div class="header__menu-text">
+                                    <div class="char-hover__item toggle" id="toggle">
+                                        menu
+                                    </div>
+                                </div>
+                            </div>
+                             
+                             <div class="sidemenu" id='sidemenu'>
+                                 <span class="close-btn" onclick="removeclaassmenu()"><i class="fa fa-close" aria-hidden="true"></i></span>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <ul class="header-icons">
+                                            <li>
+                                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <ul class="menu-open">
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">About US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Career</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Services</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Contact US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Get Quick Quote</a>
+                                            </li>
+                                        </ul>
+                                        <div class="menu-content">
+                                            <p>Contact US</p>
+                                            <ul class="list-unstyled">
+                                                <li class="d-inline-block">
+                                                    <a href="tel:+44-74332-45632">+44-74332-45632</a>
+                                                </li>
+                                                <li class="d-inline-block">
+                                                    <a href="#">info@workrush.in</a>
+                                                </li>
+                                            </ul>
+                                            <p>Address</p>
+                                            <address>15 Wood Street London, KT1 1TY, United Kingdom</address>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div> 
+            </nav>
+        </header>
+        <!------ HEADER-SECTION-END ------>
+        <!------ HERO-SECTION-START ------>
+        <section class="filter-form-section ">
+            <div class="container">
+            
+					 <form class="mb-5 p-5 border filter-form">
+						<div class="row">
+						<div class="col-12">
+							<div class="form-group mb-4">
+							 <select class="form-control" name="opppertunity" >
+								<option selected>Search Oppertunities</option>
+								<option value="" >Oppertunity 1</option>
+								<option value="" >Oppertunity 2</option>
+								<option value="" >Oppertunity 3</option>
+								<option value="" >Oppertunity 4</option>
+								<option value="" >Oppertunity 5</option>
+							 </select>
+							</div>
+						</div>
+						
+						<div class="col-3">
+							<div class="form-group mb-4">
+							 <select class="form-control" name="category" >
+								<option selected>Category</option>
+								<option value="" >Category 1</option>
+								<option value="" >Category 2</option>
+								<option value="" >Category 3</option>
+								<option value="" >Category 4</option>
+								<option value="" >Category 5</option>
+							 </select>
+							</div>
+						</div>
+						
+						<div class="col-3">
+							<div class="form-group mb-4">
+							 <select class="form-control" name="job-type" >
+								<option selected>Job Type</option>
+								<option value="" >Job Type 1</option>
+								<option value="" >Job Type 2</option>
+								<option value="" >Job Type 3</option>
+								<option value="" >Job Type 4</option>
+								<option value="" >Job Type 5</option>
+							 </select>
+							</div>
+						</div>
+						
+						<div class="col-3">
+							<div class="form-group mb-4">
+							 <select class="form-control" name="location" >
+								<option selected>Location</option>
+								<option value="" >Location 1</option>
+								<option value="" >Location 2</option>
+								<option value="" >Location 3</option>
+								<option value="" >Location 4</option>
+								<option value="" >Location 5</option>
+							 </select>
+							</div>
+						</div>
+						
+						<div class="col-3">
+							<div class="form-group">
+								<button class="search_submit_btn"><i class="fas fa-search"></i></button>
+							</div>
+						</div>
+						
+						</div>
+					  </form>
+						
+
+            </div>
+        </section>
+        <!------ HERO-SECTION-END ------>
+		
+		<section class="career-result-section mb-5">
+            <div class="container">
+			
+				<div class="career_box p-5 mb-5">
+				<div class="row">
+					<div class="col-2">
+						<div class="career_icon border p-4 text-center mb-5">
+							<img src="assets/images/career.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-7">
+						<div class="career_info p-4">
+							<h5 class="mb-3">UX Designer</h5>
+							<p class="mb-5"><i class="fa fa-clock-o" aria-hidden="true"></i> Exp. 3-4 Year</p>
+							
+						</div>
+					</div>
+					<div class="col-3  text-right">
+						<div class="career_btn pr-0">
+							<a href="#" class="apply_nw_btn">Apply Now</a>
+						</div>
+					</div>
+					<div class="col-12">
+						<ul class="career_list">
+							<li><i class="fa fa-briefcase" aria-hidden="true"></i> Full Time</li>
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Uttarakhand</li>
+							<li><i class="fa fa-calendar" aria-hidden="true"></i> Posted 2 year ago</li>
+						</ul>
+						<p>We need one UX designer who can design great soothing experience and also who is able to work in a little rushy enviorment and also should be proficient enough in time management and also know a little more about graphic design and design basics which is mandatory as a designer</p>
+					</div>
+				</div>
+				</div>
+				
+				<div class="career_box p-5 mb-5">
+				<div class="row">
+					<div class="col-2">
+						<div class="career_icon border p-4 text-center mb-5">
+							<img src="assets/images/career.png" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-7">
+						<div class="career_info p-4">
+							<h5 class="mb-3">Front End Developer</h5>
+							<p class="mb-5"><i class="fa fa-clock-o" aria-hidden="true"></i> Exp. 3-4 Year</p>
+							
+						</div>
+					</div>
+					<div class="col-3 text-right">
+						<div class="career_btn  pr-0">
+							<a href="#" class="apply_nw_btn">Apply Now</a>
+						</div>
+					</div>
+					<div class="col-12">
+						<ul class="career_list">
+							<li><i class="fa fa-briefcase" aria-hidden="true"></i> Full Time</li>
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Uttarakhand</li>
+							<li><i class="fa fa-calendar" aria-hidden="true"></i> Posted 2 year ago</li>
+						</ul>
+						<p>We need one UX designer who can design great soothing experience and also who is able to work in a little rushy enviorment and also should be proficient enough in time management and also know a little more about graphic design and design basics which is mandatory as a designer</p>
+					</div>
+				</div>
+				</div>
+				
+				
+				
+			</div>
+		</section>
+       
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="">
+                            <p><strong>Have Project In mind</strong></p>
+							<a href="#" class="lets-btn">Let’s connect</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Services</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Web developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">App Developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Digital Marketing</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Web 3.0 developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Content Creation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Career</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Blogs</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">About US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Contact US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Case Studies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Linkedin</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Facebook</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Instagram</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Reddit</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        <!------ FOOTER-SECTION-END ------>
+        
+    </main>
+	
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Let’s connect</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div class="center">
+					 <form>
+						<div class="row">
+						<div class="col-6">
+						<div class="inputbox mb-3">
+						  <input type="text" required="required">
+						  <span>Your Name</span>
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="inputbox mb-3">
+						  <input type="email" required="required">
+						  <span>Your Email</span>
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="dropdown-contact">
+								<select class="mb-3">
+							<option selected>Select Service</option>
+							<option >Website Development</option>
+							<option >App Development</option>
+							<option >Blockchain Development</option>
+							<option >Digital Marketing</option>
+							<option >Game Development</option>
+							</select>
+							
+						 
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="dropdown-contact">
+							<select class="mb-3">
+							<option selected>Select Budget</option>
+							<option >5-10K</option>
+							<option >10-20K</option>
+							<option >20-40K</option>
+							<option >40-60K</option>
+							<option >60K+</option>
+							</select>
+							
+						 
+						</div>
+						</div>
+						<div class="col-12">
+							<div class="inputbox">
+							  <input type="text" required="required">
+							  <span>Project Description</span>
+							</div>
+							<div class="inputbox">
+							  <button type="submit" name="submit" value="">Let’s get in touch <i class="fas fa-long-arrow-alt-right"></i></button>
+							</div>
+						</div>
+						</div>
+					  </form>
+										
+                   
+                </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Counts JS -->
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/btn.js"></script>
+<script>       
+function addclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.add("sidemenushow");
+} 
+           function removeclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.remove("sidemenushow");
+} 
+</script>
+</body>
+
+</html>

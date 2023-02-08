@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/images/favicon-16x16.png" rel="icon" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/sofiapro-light.otf" rel="stylesheet">
+    <link href="assets/css/material_fonts.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="assets/fonts/font-awesome.min.css" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
+    <link rel="stylesheet" type="text/css" href="assets/css/rangeslider.css">   
+    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <title>Website Designing</title>
+</head>
+<body>
+    <main>
+        <!------ HEADER-SECTION-START ------>
+        <header class="fixed-top  navbar-expand-lg navbar-light">
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="index.html" class="nav-item nav-link ">Home </a>
+                            <a href="about-us.html" class="nav-item nav-link ">About Us </a>
+							 <li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Services
+							  </a>
+							  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+								<li><a class="dropdown-item" href="app-development.html">App Development</a></li>
+								<li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+								<li><a class="dropdown-item" href="website-designing.html">website-designing</a></li>
+								<li><a class="dropdown-item" href="game-development.html">Game Development</a></li>
+								<li><a class="dropdown-item" href="digital-marketing.html">Digital Marketing</a></li>\
+							  </ul>
+							</li>
+                            <a href="contact-us.html" class="nav-item nav-link">Contact us</a>
+                            <a href="career.html" class="nav-item nav-link">Career</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-item nav-link">Request call back</a>
+                        </div>
+                        <div class="navbar-nav ms-auto right-navbar">
+                            <!--<div class="header-bar">
+                                <div class="header_in">
+                                  <button type="button" class="toggle" id="toggle">
+                                    <span></span>
+                                   </button>
+                               </div>
+                            </div>-->
+                            <div class="header__menu char-hover" onclick="addclaassmenu()">
+                                <svg class="header__menu-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__menu-icon-item" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" y="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" width="5" height="5" rx="2.5"/>
+                                    <rect class="header__menu-icon-item" x="16" y="16" width="5" height="5" rx="2.5"/>
+                                </svg>
+
+                                <div class="header__menu-text">
+                                    <div class="char-hover__item toggle" id="toggle">
+                                        menu
+                                    </div>
+                                </div>
+                            </div>
+                             
+                             <div class="sidemenu" id='sidemenu'>
+                                 <span class="close-btn" onclick="removeclaassmenu()"><i class="fa fa-close" aria-hidden="true"></i></span>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <ul class="header-icons">
+                                            <li>
+                                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <ul class="menu-open">
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">About US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Career</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Services</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Contact US</a>
+                                            </li>
+                                            <li class="d-block">
+                                                <a href="#" class="text-capitalize">Get Quick Quote</a>
+                                            </li>
+                                        </ul>
+                                        <div class="menu-content">
+                                            <p>Contact US</p>
+                                            <ul class="list-unstyled">
+                                                <li class="d-inline-block">
+                                                    <a href="tel:+44-74332-45632">+44-74332-45632</a>
+                                                </li>
+                                                <li class="d-inline-block">
+                                                    <a href="#">info@workrush.in</a>
+                                                </li>
+                                            </ul>
+                                            <p>Address</p>
+                                            <address>15 Wood Street London, KT1 1TY, United Kingdom</address>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!------ HEADER-SECTION-END ------>
+        <!------ HERO-SECTION-START ------>
+        <section class="hero-wrapper inner-page-hero mb-5">
+            <div class="container">
+                <div class="text-left">
+                    <h2>We Skyrocket businesses with<br>
+awesome websites!</h2>
+ 
+                    
+                </div>
+            </div>
+        </section>
+        <!------ HERO-SECTION-END ------>
+        
+        
+  <!------ ACTIONS-SECTION-START ------>
+        <section class="actions-bg mb-5 pt-5 home-services-tabs"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="d-flex align-items-start">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                              <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Mobile App</button>
+                              <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Website</button>
+                              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">AR / VR</button>
+                              <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Game</button>
+                            </div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                              <div class="tab-pane fade  " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                              <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+								<div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							  
+							  <div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  
+							  </div>
+                              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+								<div class="row">
+								<div class="col-md-1">
+										
+									</div>
+									<div class="col-md-6">
+										<img class="img-fluid" src="assets/images/website-img.png" alt="">
+									</div>
+									 <div class="col-md-5">
+									<div class="actions-btn">
+										<button class="outline-btn" >E-Commerce</button>
+										<button class="outline-btn" >three JS</button>
+										<button class="outline-btn" >website</button>
+										<button class="outline-btn" >React JS</button>
+										<button class="outline-btn" >Green Shock</button>
+										<button class="outline-btn" >Unity</button>
+									</div>
+								</div>
+								</div>
+							  </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </section>
+        <!------ ACTIONS-SECTION-END ------>
+		
+		 <section class="web-requirments-section mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">We have solution for <br>
+all of your website requierments!</h2>
+			<div class="web-solution-div mb-5">
+				<div class="row">
+					<div class="col-6 align-self-center">
+						<div class="web-soltion-box ">
+						
+							<img src="assets/images/e-commerce.png" class="img-fluid  mb-3" />
+							
+						</div>
+					</div>
+					<div class="col-6 align-self-center">
+					<div class="web-soltion-box p-5">
+							<h4 class="mb-3">E-Commerce Solutions</h4>
+							<ul class="web-req-features mb-4">
+								<li><i class="fas fa-check"></i> Shopify</li>
+								<li><i class="fas fa-check"></i> Wordpress</li>
+								<li><i class="fas fa-check"></i> Envato Elements</li>
+								<li><i class="fas fa-check"></i> Woocommerce</li>
+							</ul>
+							
+							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Get Quote <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+					</div>
+					
+					</div>
+				</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-6 align-self-center mb-5">
+					<div class="web-solution-div">
+						<div class="web-soltion-box p-5">
+						<img src="assets/images/mobile-api.png" class="img-fluid  mb-3" />
+							<h4 class="mb-3">Mobile API / backend</h4>
+							<ul class="web-req-features mb-4">
+								<li><i class="fas fa-check"></i> Shopify</li>
+								<li><i class="fas fa-check"></i> Wordpress</li>
+								<li><i class="fas fa-check"></i> Envato Elements</li>
+								<li><i class="fas fa-check"></i> Woocommerce</li>
+							</ul>
+							
+							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Get Quote <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+					</div>
+					</div>
+					</div>
+					<div class="col-6  align-self-center mb-5">
+					<div class="web-solution-div">
+						<div class="web-soltion-box p-5">
+						<img src="assets/images/payment.png" class="img-fluid  mb-3" />
+							<h4 class="mb-3">Custom Solution</h4>
+							<ul class="web-req-features mb-4">
+								<li><i class="fas fa-check"></i> Custom Functionalities</li>
+								<li><i class="fas fa-check"></i> Wordpress</li>
+								<li><i class="fas fa-check"></i> Envato Elements</li>
+								<li><i class="fas fa-check"></i> Woocommerce</li>
+							</ul>
+							
+							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Get Quote <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+					</div>
+					</div>
+					</div>
+				</div>
+				
+				<div class="web-solution-div mb-5">
+				<div class="row">
+					<div class="col-6 align-self-center">
+						<div class="web-soltion-box ">
+						
+							<img src="assets/images/custom-solution.png" class="img-fluid  mb-3" />
+							
+						</div>
+					</div>
+					<div class="col-6 align-self-center">
+					<div class="web-soltion-box p-5">
+							<h4 class="mb-3">Payment Solutions</h4>
+							<ul class="web-req-features mb-4">
+								<li><i class="fas fa-check"></i> Shopify</li>
+								<li><i class="fas fa-check"></i> Wordpress</li>
+								<li><i class="fas fa-check"></i> Envato Elements</li>
+								<li><i class="fas fa-check"></i> Woocommerce</li>
+							</ul>
+							
+							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">Get Quote <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+					</div>
+					
+					</div>
+				</div>
+				</div>
+              
+            </div>
+        </section>
+		
+		
+		   <section class="what-we-say-section mb-5 pt-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Our Projects</h2>
+				<div class="row">
+					<div class="col-6">
+						<div class="portfolio-box p-3">
+							<h4 class="mb-3"><strong>QUEAL</strong></h4>
+							<img src="assets/images/music.png" class="img-fluid  mb-3" />
+							<ul class="port-features">
+								<li>Payment solutions</li>
+								<li>React JS</li>
+								<li>JavaScript</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6">
+					<div class="portfolio-box p-3">
+							<h4 class="mb-3"><strong>SHOCK</strong></h4>
+							<img src="assets/images/digital-art.png" class="img-fluid  mb-3" />
+							<ul class="port-features">
+								<li>E-Commerce</li>
+								<li>Vue JS</li>
+								<li>Three JS</li>
+								<li>Java Script</li>
+							</ul>
+						</div>
+					
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-6">
+						<div class="portfolio-box p-3">
+							<h4 class="mb-3"><strong>QUEAL</strong></h4>
+							<img src="assets/images/clothing.png" class="img-fluid  mb-3" />
+							<ul class="port-features">
+								<li>Payment solutions</li>
+								<li>React JS</li>
+								<li>JavaScript</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6">
+					<div class="portfolio-box p-3">
+							<h4 class="mb-3"><strong>SHOCK</strong></h4>
+							<img src="assets/images/browse-all.png" class="img-fluid  mb-3" />
+							<ul class="port-features">
+									<li>E-Commerce</li>
+								<li>Vue JS</li>
+								<li>Three JS</li>
+								<li>Java Script</li>
+							</ul>
+						</div>
+					
+					</div>
+				</div>
+              
+            </div>
+        </section>
+		
+		 <section class="techno-used mb-5  pt-5 pb-5"> 
+            <div class="container">
+                <h2 class="text-center mb-5">Technologies we use</h2>
+                <div class="row text-center">
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/image24.png" alt="">
+                    </div>
+                    <div class="col-3  col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/django.png" alt="">
+                    </div>
+                    <div class="col-3  col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/angular.png" alt="">
+                    </div>
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/JS.png" alt="">
+                    </div>
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/mongodb.png" alt="">
+                    </div>
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/php.png" alt="">
+                    </div>
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/python.png" alt="">
+                    </div>
+                    <div class="col-3 col-md-3 mb-4">
+                        <img class="img-fluid" src="assets/images/react.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+		
+		
+		  <section class="together-section mb-5 pt-5 text-center"> 
+            <div class="container">
+                <h1 class="text-center mb-5">Let’s create miracle together!</h1>
+               
+                 <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
+                              <span data-text="Let’s Connect">get in touch <i class="fas fa-long-arrow-alt-right"></i></span>
+                            </span>
+                            <span class="cb-btn_more-ripple">
+                                <span></span>
+                            </span>
+                        </a>
+              
+            </div>
+        </section>
+     
+		
+		 <section class="actionbottom-bg mb-5 services-link-list pt-5 pb-5">
+            <div class="container">
+				<ul class="accordion-hover">
+					<li><a href="#"><span>01</span>Website Developement <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
+					<li><a href="#"><span>02</span>App Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>03</span>Game Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>04</span>Digital Marketing <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>05</span>Web3 Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+				</ul>
+			</div>
+		</section>
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <img class="img-fluid" src="assets/images/logo.png" alt="">
+                            <p><strong>Have Project In mind</strong></p>
+							<a href="#" class="lets-btn">Let’s connect</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Services</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Web developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">App Developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Digital Marketing</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Web 3.0 developement</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Content Creation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Career</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Blogs</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">About US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Contact US</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Case Studies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="prodfoot-list">
+                            <h5>Other Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Linkedin</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Facebook</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Instagram</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Reddit</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        <!------ FOOTER-SECTION-END ------>
+        
+    </main>
+	
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Let’s connect</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div class="center">
+					 <form>
+						<div class="row">
+						<div class="col-6">
+						<div class="inputbox mb-3">
+						  <input type="text" required="required">
+						  <span>Your Name</span>
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="inputbox mb-3">
+						  <input type="email" required="required">
+						  <span>Your Email</span>
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="dropdown-contact">
+								<select class="mb-3">
+							<option selected>Select Service</option>
+							<option >Website Development</option>
+							<option >App Development</option>
+							<option >Blockchain Development</option>
+							<option >Digital Marketing</option>
+							<option >Game Development</option>
+							</select>
+							
+						 
+						</div>
+						</div>
+						<div class="col-6">
+						<div class="dropdown-contact">
+							<select class="mb-3">
+							<option selected>Select Budget</option>
+							<option >5-10K</option>
+							<option >10-20K</option>
+							<option >20-40K</option>
+							<option >40-60K</option>
+							<option >60K+</option>
+							</select>
+							
+						 
+						</div>
+						</div>
+						<div class="col-12">
+							<div class="inputbox">
+							  <input type="text" required="required">
+							  <span>Project Description</span>
+							</div>
+							<div class="inputbox">
+							  <button type="submit" name="submit" value="">Let’s get in touch <i class="fas fa-long-arrow-alt-right"></i></button>
+							</div>
+						</div>
+						</div>
+					  </form>
+										
+                   
+                </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Counts JS -->
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/btn.js"></script>
+<script src="assets/js/rangeslider.min.js"></script>
+<script src="assets/js/rangeslider.js"></script>
+    <script>
+        /*var btn = document.querySelector('.toggle');
+var btnst = true;
+btn.onclick = function() {
+  if(btnst == true) {
+    document.querySelector('.toggle span').classList.add('toggle');
+    document.getElementById('sidemenu').classList.add('sidemenushow');
+    btnst = false;
+  }else if(btnst == false) {
+    document.querySelector('.toggle span').classList.remove('toggle');
+    document.getElementById('sidemenu').classList.remove('sidemenushow');
+    btnst = true;
+  }
+}*/
+        
+   function addclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.add("sidemenushow");
+} 
+           function removeclaassmenu() {
+   var element = document.getElementById("sidemenu");
+   element.classList.remove("sidemenushow");
+} 
+    </script>
+	
+	<script>
+	jQuery('.what-say-slider').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+	   dots: true,
+	infinite: true,
+	});
+	
+   jQuery('input[type="range"]').rangeslider({
+
+    // Feature detection the default is `true`.
+    // Set this to `false` if you want to use
+    // the polyfill also in Browsers which support
+    // the native <input type="range"> element.
+    polyfill: true,
+
+    // Default CSS classes
+    rangeClass: 'rangeslider',
+    disabledClass: 'rangeslider--disabled',
+    horizontalClass: 'rangeslider--horizontal',
+    verticalClass: 'rangeslider--vertical',
+    fillClass: 'rangeslider__fill',
+    handleClass: 'rangeslider__handle',
+
+    // Callback function
+    onInit: function() {},
+
+    // Callback function
+    onSlide: function(position, value) {},
+
+    // Callback function
+    onSlideEnd: function(position, value) {}
+});
+	</script>
+</body>
+
+</html>
