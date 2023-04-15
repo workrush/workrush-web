@@ -17,7 +17,7 @@
     transition-property:transform;
     will-change:transform;
     transition:transform .6s ease;
-    transition-delay:calc(var(--char-index) * 10ms)
+    /*transition-delay:calc(var(--char-index) * 10ms)*/
 }
 @media (max-width: 1023px){
     .char-hover__item-inner-char--empty{
@@ -32,7 +32,7 @@
     transition-property:transform;
     will-change:transform;
     transition:transform .6s ease;
-    transition-delay:calc(var(--char-index) * 10ms);
+    /*transition-delay:calc(var(--char-index) * 10ms);*/
     transform:translateY(100%)
 }
 @media (max-width: 1023px){
@@ -57,4 +57,4 @@
     flex-direction:row;
     justify-content:center;
     align-items:center
-} 
+}

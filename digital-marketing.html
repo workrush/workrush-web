@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
     <link rel="stylesheet" type="text/css" href="assets/css/rangeslider.css">   
     <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
-    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">
     <title>Digital Marketing</title>
 </head>
 <body>
@@ -135,7 +135,11 @@
                     <h2>How much <strong>traffic</strong> you want to<br>
  generate for your <strong>digital business?</strong></h2>
  
-                    <div class="cb-featured-more text-center">
+                    <div id="slider-wrapper" class="cb-featured-more">
+                        <div class="sliderContainer mb-5">
+                            <input type="range" value="0" min="0" max="100" id="slider">
+                            <span id="output"></span>
+                        </div>
                         <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
                               <span data-text="Let’s Connect">Get Quote <i class="fas fa-long-arrow-alt-right"></i></span>
                             </span>
@@ -747,6 +751,17 @@ btn.onclick = function() {
     btnst = true;
   }
 }*/
+
+
+
+
+var slider = document.getElementById("slider");
+var output = document.getElementById("output");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
         
    function addclaassmenu() {
    var element = document.getElementById("sidemenu");

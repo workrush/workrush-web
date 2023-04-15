@@ -18,8 +18,17 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
     <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
     <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ScrollSmoother.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script src="./assets/js/MotionPathPlugin.min.js"></script>
+    <script src="./assets/js/DrawSVGPlugin3.min.js"></script>
     <title>About Us</title>
 </head>
+<div id="cursor-bg"></div>
 <body>
     <main>
         <!------ HEADER-SECTION-START ------>
@@ -157,7 +166,7 @@
 							<h3 class="mb-3">We help business grow online</h3>
 							<p class="mb-3">Augmented reality (AR) is the integration of digital information with the user's environment in real time. Unlike virtual reality (VR), which creates a totally artificial environment.</p>
 							<a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
-                              <span data-text="Let’s Connect">Services <i class="fas fa-long-arrow-alt-right"></i></span>
+                              <span id="test" data-text="Let’s Connect">Services <i class="fas fa-long-arrow-alt-right"></i></span>
                             </span>
                             <span class="cb-btn_more-ripple">
                                 <span></span>
@@ -183,18 +192,25 @@
                
                     <div class="row">
                         <div class="col-md-7 align-self-center">
-                           <div class="storyStep  border p-5 mb-5">
+                           <div class="storyStep  border p-5 mb-0">
 							<h3 class="mb-3">Ideation <span>2019</span></h3>
 							<p>Started Work Rush and registered this domain</p>
 						   </div>
+                           
                         </div>
 						<div class="col-md-5"> </div>
                     </div>
 					
 					<div class="row">
-						<div class="col-md-5"> </div>
+						<div class="col-md-5">
+                            
+                        </div>
                         <div class="col-md-7 align-self-center">
-                           <div class="storyStep border p-5 mb-5 mt-5">
+                           <!--<img id="path1" class="path-journey" style="margin-left: -240px;" src="./assets/images/vector_444.svg"/>-->
+                           <svg id="path1" class="path-journey" style="margin-left: -240px" width="244" height="295" viewBox="0 0 244 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="pathpath1" d="M12.5 1C35.1719 17.5 47.6985 48 35.1719 84.9195C19.8452 130.092 -18.1503 175.58 12.4998 225C31.6256 255.838 38.0951 294 112.595 294C187.095 294 181 232 243.5 239" stroke="black" stroke-dasharray="21 21"/>
+                           </svg> 
+                           <div id="trigger2" style="margin-top: -38%; background-color: white;" class="storyStep border p-5 mb-5">
 								<div class="innserStoryStep mb-5">
 									<h3 class="mb-2">Formalization <span>2020</span></h3>
 									<p>Touched the first milestone by getting enlisted with MCA India legally</p>
@@ -218,6 +234,10 @@
 					
 					
 					   <div class="row">
+                        <!--<img id="path2" class="path-journey" src="./assets/images/vector_445.svg"/>-->
+                        <svg id="path2" class="path-journey" width="196" height="335" viewBox="0 0 196 335" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="pathpath2" d="M195.5 0.5C136 34.5 35 0.5 56.9994 149.5C75.9451 277.818 -33.438 232.128 11.9998 334" stroke="black" stroke-dasharray="21 21"/>
+                        </svg>       
                         <div class="col-md-7 align-self-center">
                            <div class="storyStep  border p-5 mb-5 mt-5">
 							<h3 class="mb-3">Growth Strategy <span>2019</span></h3>
@@ -273,7 +293,7 @@
                 <h1 class="text-center mb-5">Let’s create miracle together!</h1>
                
                  <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
-                              <span data-text="Let’s Connect">get in touch <i class="fas fa-long-arrow-alt-right"></i></span>
+                              <span data-text="Let’s Connect">Get in Touch <i class="fas fa-long-arrow-alt-right"></i></span>
                             </span>
                             <span class="cb-btn_more-ripple">
                                 <span></span>
@@ -287,11 +307,11 @@
 		 <section class="actionbottom-bg mb-5 services-link-list pt-5 pb-5">
             <div class="container">
 				<ul class="accordion-hover">
-					<li><a href="#"><span>01</span>Website Developement <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
-					<li><a href="#"><span>02</span>App Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>03</span>Game Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>04</span>Digital Marketing <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>05</span>Web3 Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>01</span><span class="service-item">Website Developement</span><i class="fas fa-long-arrow-alt-right"></i></i></a></li>
+					<li><a href="#"><span>02</span><span class="service-item">App Developement</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>03</span><span class="service-item">Game Developement</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>04</span><span class="service-item">Digital Marketing</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>05</span><span class="service-item">Web3 Developement</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
 				</ul>
 			</div>
 		</section>
@@ -388,29 +408,140 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/btn.js"></script>
-    <script>
-        /*var btn = document.querySelector('.toggle');
-var btnst = true;
-btn.onclick = function() {
-  if(btnst == true) {
-    document.querySelector('.toggle span').classList.add('toggle');
-    document.getElementById('sidemenu').classList.add('sidemenushow');
-    btnst = false;
-  }else if(btnst == false) {
-    document.querySelector('.toggle span').classList.remove('toggle');
-    document.getElementById('sidemenu').classList.remove('sidemenushow');
-    btnst = true;
+
+<script>
+ 
+
+//gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+//ScrollTrigger.normalizeScroll(true);
+
+
+/*
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+smooth: 3,
+effects: true,
+});
+
+*/
+
+
+//smoother.effects("img", { speed: "auto" });
+
+// pin box-c when it reaches the center of the viewport, for 300px
+
+/*
+ScrollTrigger.create({
+trigger: ".box-c",
+pin: true,
+start: "center center",
+end: "+=300"
+});
+
+document.querySelector("button").addEventListener("click", e => {
+// scroll to the spot where .box-c is in the center.
+// parameters: element, smooth, position
+smoother.scrollTo(".box-c", true, "center center");
+
+// or you could animate the scrollTop:
+// gsap.to(smoother, {
+// 	scrollTop: smoother.offset(".box-c", "center center"),
+// 	duration: 1
+// });
+});
+
+*/
+
+
+var cursor = new MouseFollower();
+//const box = document.querySelector('#test');
+//const el = document.querySelector('.my-fixed-element');
+
+const cursorBG = document.getElementById('cursor-bg');
+setInterval(() => {
+    cursorBG.style.left = cursor.pos.x - 150 + 'px';
+    cursorBG.style.top = cursor.pos.y - 150 + 'px';    
+}, 50);
+
+
+
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin/*, MotionPathPlugin*/);
+gsap.defaults({ease: "none"});
+
+
+/*
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+smooth: 3,
+effects: true,
+});
+*/
+
+/*
+let fishingAction = gsap.timeline({defaults: {duration: 1},
+  scrollTrigger: {
+    trigger: "#path1",
+    scrub: true,
+    start: "top top",
+    end: "bottom bottom",
+    // markers: true,
+  }})
+  .set("#path1", {drawSVG: 0}, 0)
+  .from("#path1", {drawSVG: 0}, 0)
+  .to("#path1",{y:200},0);
+
+console.log(fishingAction);
+*/
+
+
+gsap.fromTo("#pathpath1", {
+  drawSVG: 0
+}, {
+  drawSVG: "100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#test",
+    pin: false,
+    scrub: 4.0,
+    start: "top top",
+    end: "bottom bottom"
   }
-}*/
-        
-   function addclaassmenu() {
-   var element = document.getElementById("sidemenu");
-   element.classList.add("sidemenushow");
-} 
-           function removeclaassmenu() {
-   var element = document.getElementById("sidemenu");
-   element.classList.remove("sidemenushow");
-} 
+})
+
+gsap.fromTo("#pathpath2", {
+  drawSVG: 0
+}, {
+  drawSVG: "100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#trigger2",
+    pin: false,
+    scrub: 4.0,
+    start: "top top",
+    end: "bottom bottom"
+  }
+})
+
+
+const els = document.querySelectorAll('.service-item');
+
+els.forEach((el) => {
+
+        el.addEventListener('mouseenter', () => {
+            console.log('hello ss');
+            cursor.setText('View More');
+        });
+
+        el.addEventListener('mouseleave', () => {
+            console.log('text removed');
+            cursor.removeText();
+        });
+    })
+
+   
+
     </script>
 	
 	<script>

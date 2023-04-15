@@ -15,10 +15,21 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
     <link rel="stylesheet" type="text/css" href="assets/css/menu.css">  
-    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">  
+    <link rel="stylesheet" type="text/css" href="assets/css/btn.css">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ScrollSmoother.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <style>
+        
+    </style>
     <title>Home</title>
 </head>
+<div id="cursor-bg"></div>
 <body>
+    
     <main>
         <!------ HEADER-SECTION-START ------>
         <header class="fixed-top  navbar-expand-lg navbar-light">
@@ -33,10 +44,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav m-auto">
-                            <a href="home.html" class="nav-item nav-link ">Home </a>
-                            <a href="#" class="nav-item nav-link">Services</a>
-                            <a href="#" class="nav-item nav-link">Contact us</a>
-                            <a href="#" class="nav-item nav-link">Request call back</a>
+                            <a href="home.html" class="nav-item nav-link char-hover"><span class="char-hover__item toggle">Home</span></a>
+                            <a href="home.html" class="nav-item nav-link char-hover"><span class="char-hover__item toggle">Services</span></a>
+                            <a href="home.html" class="nav-item nav-link char-hover"><span class="char-hover__item toggle">Contact us</span></a>
+                            <a href="home.html" class="nav-item nav-link char-hover"><span class="char-hover__item toggle">Request call back</span></a>
                         </div>
                         <div class="navbar-nav ms-auto right-navbar">
                             <!--<div class="header-bar">
@@ -131,8 +142,9 @@
                 <div class="text-center">
                     <h2><b>One Stop Solution</b> for your online business</h2>
                     <div class="cb-featured-more">
-                        <a class="cb-btn cb-btn_more" href="#" data-magnetic="" style="transform: translate3d(0px, 0px, 0px);">                             <span class="cb-btn_more-title">
-                              <span data-text="Estimate your project">Estimate your project</span>
+                        <a id="test" class="cb-btn cb-btn_more" href="#">
+                            <span class="cb-btn_more-title">
+                              <span data-magnetic data-text="Estimate your project">Estimate your project</span>
                             </span>
                             <span class="cb-btn_more-ripple">
                                 <span></span>
@@ -168,25 +180,247 @@
             <div class="container">
                 <h2 class="text-center mb-5">Let’s get a quick quote!</h2>
                 <div class="quick-inner">
-                    <div class="row  text-center">
-                        <div class="col-md-4">
+                    <div id="div1" class="row text-center">
+                        <h3 class="estimate-headline">What kind of project are you developing?</h3>
+                        <div onclick="handleEstimateQuote('21')" class="col-md-4 char-hover">
                             <div class="quick-box border">
                                 <img class="img-fluid" src="assets/images/app-img.png" alt="">
                             </div>
-                            <h5 class=" mb-0">Application</h5>
+                            <h5 class="char-hover__item toggle mb-0">Application</h5>
                         </div>
-                        <div class="col-md-4">
+                        <div onclick="handleEstimateQuote('22')" class="col-md-4 char-hover">
                             <div class="quick-box border">
                                 <img class="img-fluid" src="assets/images/web-img.png" alt="">
                             </div>
-                            <h5 class=" mb-0">Website</h5>
+                            <h5 class="char-hover__item toggle mb-0">Website</h5>
                         </div>
-                        <div class="col-md-4">
+                        <div onclick="handleEstimateQuote('23')" class="col-md-4 char-hover">
                             <div class="quick-box border">
                                 <img class="img-fluid" src="assets/images/game-img.png" alt="">
                             </div>
-                            <h5 class="mb-0">Game</h5>
+                            <h5 class="char-hover__item toggle mb-0">Game</h5>
                         </div>
+                    </div>
+                    <div id="div21" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">How would you like to start?</h3>
+                        <div onclick="handleEstimateQuote('31')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">New</h5>
+                        </div>
+                        <div onclick="handleEstimateQuote('32')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Old</h5>
+                        </div>  
+                    </div>
+                    <div id="div22" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">How would you like to start?</h3>
+                        <div onclick="handleEstimateQuote('33')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">New</h5>
+                        </div>
+                        <div onclick="handleEstimateQuote('32')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Old</h5>
+                        </div>   
+                    </div>
+                    <div id="div31" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline"><h3 class="estimate-headline">What platform do you want the app to be developed on?</h3>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">IOS</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Android</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Both</h5>
+                        </div>  
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Not Sure</h5>
+                        </div>    
+                    </div>
+                    <div id="div32" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">For which platform is your app developed?</h3>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">IOS</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Android</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Both</h5>
+                        </div>   
+                    </div>
+                    <div id="div9" style="justify-content: center;" class="row text-center">
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Phone</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Tablet</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Both</h5>
+                        </div>  
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Not Sure</h5>
+                        </div>    
+                    </div>
+                    <div id="div33" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">What category best describes your web application?</h3>
+                        <div onclick="handleEstimateQuote('43')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Static</h5>
+                        </div>
+                        <div onclick="handleEstimateQuote('42')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Dynamic</h5>
+                        </div>  
+                    </div>
+                    <div id="div32" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">What type of web solution do you need?</h3>
+                        <div onclick="handleEstimateQuote('43')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Static</h5>
+                        </div>
+                        <div onclick="handleEstimateQuote('42')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Dynamic</h5>
+                        </div>  
+                        <div onclick="handleEstimateQuote('43')" class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">I Don't Know</h5>
+                        </div> 
+                    </div>
+                    
+                    <div id="div42" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">What category best describes your web application?</h3>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">E-Commerce Solution</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Custom Web Developement</h5>
+                        </div>  
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Portal Developement</h5>
+                        </div>
+                        <div class="col-md-3 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Blog Developement</h5>
+                        </div>  
+                    </div>
+                    <div id="div43" style="justify-content: center;" class="row text-center">
+                        <h3 class="estimate-headline">Which technology would you like to use?</h3>
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">PHP</h5>
+                        </div>
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Laravel</h5>
+                        </div>  
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">CodeIgniter</h5>
+                        </div>
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">WordPress</h5>
+                        </div> 
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Other</h5>
+                        </div>
+                        <div class="col-md-2 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">I Don't Know</h5>
+                        </div> 
+                    </div>
+                    <div id="div7" style="justify-content: center;" class="row text-center">
+                        <div class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/app-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Ready Theme</h5>
+                        </div>
+                        <div class="col-md-4 char-hover">
+                            <div class="quick-box border">
+                                <img class="img-fluid" src="assets/images/web-img.png" alt="">
+                            </div>
+                            <h5 class="char-hover__item toggle mb-0">Custom UI</h5>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -302,11 +536,11 @@
 		 <section class="actionbottom-bg mb-5 services-link-list pt-5 pb-5">
             <div class="container">
 				<ul class="accordion-hover">
-					<li><a href="#"><span>01</span>Website Developement <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
-					<li><a href="#"><span>02</span>App Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>03</span>Game Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>04</span>Digital Marketing <i class="fas fa-long-arrow-alt-right"></i></a></li>
-					<li><a href="#"><span>05</span>Web3 Developement <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a href="#"><span>01</span><span class="service-item">Website Developement</span> <i class="fas fa-long-arrow-alt-right"></i></i></a></li>
+					<li><a class="service-item" href="#"><span>02</span><span class="service-item">App Developement</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a class="service-item" href="#"><span>03</span><span class="service-item">Game Developement</span><i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a class="service-item" href="#"><span>04</span><span class="service-item">Digital Marketing</span> <i class="fas fa-long-arrow-alt-right"></i></a></li>
+					<li><a class="service-item" href="#"><span>05</span><span class="service-item">Web3 Developement</span> <i class="fas fa-long-arrow-alt-right"></i></a></li>
 				</ul>
 			</div>
 		</section>
@@ -460,20 +694,20 @@
                         <div class="prodfoot-list">
                             <h5>Services</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Web developement</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary ">Web developement</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">App Developement</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">App Developement</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Digital Marketing</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Digital Marketing</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Web 3.0 developement</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Web 3.0 developement</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Content Creation</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Content Creation</a>
                                 </li>
                             </ul>
                         </div>
@@ -482,20 +716,20 @@
                         <div class="prodfoot-list">
                             <h5>Other Links</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Career</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary ">Career</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Blogs</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Blogs</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">About US</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">About US</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Contact US</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Contact US</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Case Studies</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Case Studies</a>
                                 </li>
                             </ul>
                         </div>
@@ -505,20 +739,20 @@
                         <div class="prodfoot-list">
                             <h5>Other Links</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary ">Linkedin</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary ">Linkedin</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Facebook</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Facebook</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Instagram</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Instagram</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Reddit</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Reddit</a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="javscriptvoid(0)" class=" text-decoration-none text-secondary">Twitter</a>
+                                <li class="mb-2 char-hover">
+                                    <a href="javscriptvoid(0)" class="char-hover__item toggle text-decoration-none text-secondary">Twitter</a>
                                 </li>
                             </ul>
                         </div>
@@ -535,9 +769,11 @@
     <!-- Counts JS -->
     <!-- jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/menu.js"></script>
 
-<script src="assets/js/menu.js"></script>
-<script src="assets/js/btn.js"></script>
+
+
+   -->
     <script>
         /*var btn = document.querySelector('.toggle');
 var btnst = true;
@@ -552,6 +788,115 @@ btn.onclick = function() {
     btnst = true;
   }
 }*/
+
+    var currentStep = 1;
+
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    ScrollTrigger.normalizeScroll(true)
+
+    // create the smooth scroller FIRST!
+    let smoother = ScrollSmoother.create({
+    smooth: 3,
+    effects: true,
+    });
+
+    //smoother.effects("img", { speed: "auto" });
+
+    // pin box-c when it reaches the center of the viewport, for 300px
+    
+    /*
+    ScrollTrigger.create({
+    trigger: ".box-c",
+    pin: true,
+    start: "center center",
+    end: "+=300"
+    });
+
+    document.querySelector("button").addEventListener("click", e => {
+    // scroll to the spot where .box-c is in the center.
+    // parameters: element, smooth, position
+    smoother.scrollTo(".box-c", true, "center center");
+    
+    // or you could animate the scrollTop:
+    // gsap.to(smoother, {
+    // 	scrollTop: smoother.offset(".box-c", "center center"),
+    // 	duration: 1
+    // });
+    });
+
+    */
+    
+
+    var cursor = new MouseFollower();
+    const box = document.querySelector('#test');
+    //const el = document.querySelector('.my-fixed-element');
+
+    const cursorBG = document.getElementById('cursor-bg');
+    console
+    setInterval(() => {
+        cursorBG.style.left = cursor.pos.x - 150 + 'px';
+        cursorBG.style.top = cursor.pos.y - 150 + 'px';    
+    }, 50);
+    
+    
+    box.addEventListener('mouseenter', () => {
+    
+    cursor.setStick(box);
+    });
+    
+
+    box.addEventListener('mouseleave', () => {
+    cursor.removeStick();
+    });
+
+    const els = document.querySelectorAll('.service-item');
+
+    els.forEach((el) => {
+
+        el.addEventListener('mouseenter', () => {
+            console.log('hello ss');
+            cursor.setText('View More');
+        });
+
+        el.addEventListener('mouseleave', () => {
+            cursor.removeText();
+        });
+    })
+
+    document.getElementById('div1').style.display = 'flex';
+    
+    function handleEstimateQuote(step){
+     
+       document.getElementById('div'+currentStep).style.display = 'none';
+
+       /*
+        switch(step) {
+            case '21':
+                document.getElementById('div21').style.display = 'flex';
+                break;
+            case '22':
+                document.getElementById('div22').style.display = 'flex';
+                break;
+            case '23':
+                document.getElementById('div23').style.display = 'flex';
+                break;
+            case '32':
+                document.getElementById('div32').style.display = 'flex';
+                break;
+            case '33':
+                document.getElementById('div33').style.display = 'flex';
+                break;            
+            default:
+                break;
+        }
+        */
+
+        document.getElementById('div'+step).style.display = 'flex';
+
+        currentStep = step;
+    }
+    
         
    function addclaassmenu() {
    var element = document.getElementById("sidemenu");
@@ -561,7 +906,11 @@ btn.onclick = function() {
    var element = document.getElementById("sidemenu");
    element.classList.remove("sidemenushow");
 } 
+
+
+
     </script>
+    <script src="assets/js/btn.js"></script>
 </body>
 
 </html>
