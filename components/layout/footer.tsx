@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
+const basePath = process.env.NODE_ENV === "production" ? "/workrush-web" : "";
+
 const services = [
   { name: "App Development", href: "/services/app-development" },
   { name: "Web Development", href: "/services/web-development" },
@@ -39,7 +41,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-2 lg:col-span-4 space-y-4 md:space-y-6">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-h.png"
+                src={`${basePath}/images/logo-h.png`}
                 alt="Workrush"
                 width={140}
                 height={35}
