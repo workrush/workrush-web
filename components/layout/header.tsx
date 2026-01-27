@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const basePath = process.env.NODE_ENV === "production" ? "/workrush-web" : "";
+
 const services = [
   { name: "App Development", href: "/services/app-development" },
   { name: "Web Development", href: "/services/web-development" },
@@ -39,7 +41,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logo-h.png"
+            src={`${basePath}/images/logo-h.png`}
             alt="Workrush"
             width={160}
             height={40}
