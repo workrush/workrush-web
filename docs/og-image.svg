@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Left border accent -->
+  <defs>
+    <linearGradient id="leftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B9444"/>
+      <stop offset="100%" stop-color="#0B9444" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bottomGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B9444"/>
+      <stop offset="50%" stop-color="#0B9444" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0B9444" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="4" height="630" fill="url(#leftGrad)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#bottomGrad)"/>
+
+  <!-- Corner markers -->
+  <text x="0" y="18" font-family="monospace" font-size="16" fill="#0B9444">+</text>
+  <text x="0" y="628" font-family="monospace" font-size="16" fill="#0B9444">+</text>
+
+  <!-- Company name -->
+  <text x="600" y="240" text-anchor="middle" font-family="sans-serif" font-size="72" font-weight="900" fill="#fafafa" letter-spacing="-2">Workrush</text>
+
+  <!-- Tagline -->
+  <text x="600" y="295" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#0B9444">We Build Digital Products That Scale</text>
+
+  <!-- Service tags -->
+  <g transform="translate(600, 360)">
+    <rect x="-380" y="-16" width="100" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="-330" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">App Dev</text>
+
+    <rect x="-260" y="-16" width="105" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="-208" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">Web Dev</text>
+
+    <rect x="-135" y="-16" width="85" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="-93" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">AI/ML</text>
+
+    <rect x="-30" y="-16" width="85" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="13" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">Cloud</text>
+
+    <rect x="75" y="-16" width="80" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="115" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">SaaS</text>
+
+    <rect x="175" y="-16" width="80" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="215" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">Web3</text>
+
+    <rect x="275" y="-16" width="105" height="34" rx="6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="328" y="6" text-anchor="middle" font-family="monospace" font-size="14" fill="#a1a1aa">Games</text>
+  </g>
+
+  <!-- URL -->
+  <text x="600" y="440" text-anchor="middle" font-family="monospace" font-size="18" fill="#525252">workrush.co.uk</text>
+
+  <!-- // label -->
+  <text x="60" y="580" font-family="monospace" font-size="14" fill="#0B9444" opacity="0.6">// From MVP to enterprise, we ship fast without compromising quality.</text>
+</svg>
