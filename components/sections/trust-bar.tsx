@@ -3,14 +3,12 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/effects/motion";
 
-const basePath = process.env.NODE_ENV === "production" ? "/workrush-web" : "";
-
 const clients = [
-  { name: "G10 Assist", logo: `${basePath}/images/g10-client.png` },
-  { name: "Footbus", logo: `${basePath}/images/footbus-client.png` },
-  { name: "Reman UK", logo: `${basePath}/images/reman-uk-client.png` },
-  { name: "LiveHappy", logo: `${basePath}/images/live-happy-client.png` },
-  { name: "Ministry of Defence", logo: `${basePath}/images/mod-client.png` },
+  { name: "G10 Assist", logo: "/images/g10-client.png" },
+  { name: "Footbus", logo: "/images/footbus-client.png" },
+  { name: "Reman UK", logo: "/images/reman-uk-client.png" },
+  { name: "LiveHappy", logo: "/images/live-happy-client.png" },
+  { name: "Ministry of Defence", logo: "/images/mod-client.png" },
 ];
 
 export function TrustBar() {

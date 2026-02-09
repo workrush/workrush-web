@@ -6,15 +6,16 @@ import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const basePath = process.env.NODE_ENV === "production" ? "/workrush-web" : "";
-
 const services = [
   { name: "App Development", href: "/services/app-development" },
   { name: "Web Development", href: "/services/web-development" },
-  { name: "Website Designing", href: "/services/website-designing" },
+  { name: "AI & ML Solutions", href: "/services/ai-ml-solutions" },
+  { name: "Cloud & DevOps", href: "/services/cloud-devops" },
+  { name: "SaaS Development", href: "/services/saas-development" },
   { name: "Game Development", href: "/services/game-development" },
-  { name: "Digital Marketing", href: "/services/digital-marketing" },
   { name: "Web3 Development", href: "/services/web3-development" },
+  { name: "Website Designing", href: "/services/website-designing" },
+  { name: "Digital Marketing", href: "/services/digital-marketing" },
 ];
 
 const navLinks = [
@@ -41,7 +42,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src={`${basePath}/images/logo-h.png`}
+            src="/images/logo-h.png"
             alt="Workrush"
             width={160}
             height={40}

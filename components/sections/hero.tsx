@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight, Smartphone, Globe as GlobeIcon, Palette, Gamepad2, TrendingUp, Blocks } from "lucide-react";
+import { ArrowRight, Smartphone, Globe as GlobeIcon, Palette, Gamepad2, TrendingUp, Blocks, BrainCircuit, Cloud, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -16,6 +16,9 @@ const services = [
   { icon: Smartphone, label: "App Dev" },
   { icon: GlobeIcon, label: "Web Dev" },
   { icon: Palette, label: "UI/UX" },
+  { icon: BrainCircuit, label: "AI/ML" },
+  { icon: Cloud, label: "Cloud" },
+  { icon: Rocket, label: "SaaS" },
   { icon: Gamepad2, label: "Games" },
   { icon: TrendingUp, label: "Marketing" },
   { icon: Blocks, label: "Web3" },
@@ -32,10 +35,12 @@ export function Hero() {
         <div className="py-24 md:py-32 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="relative border-l-2 border-primary pl-6 md:pl-10">
+            <div className="relative border-l-2 border-primary pl-6 md:pl-10 pb-8">
+              {/* Fading bottom line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/50 to-transparent" />
               {/* Terminal markers */}
               <div className="absolute -top-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
-              <div className="absolute bottom-0 -left-[5px] text-primary font-mono text-sm">+</div>
+              <div className="absolute -bottom-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
 
               <div className="max-w-xl">
                 {/* Headline */}
@@ -61,23 +66,30 @@ export function Hero() {
                   Mobile apps, web platforms, and everything in between.
                 </motion.p>
 
-                {/* Service Tags */}
+                {/* Service Icons */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="flex flex-wrap items-center mb-10 font-mono text-sm"
+                  className="flex flex-wrap items-center gap-3 mb-10"
                 >
-                  {services.map((service, index) => (
-                    <span key={service.label} className="flex items-center">
-                      <span className="text-muted-foreground hover:text-primary transition-colors cursor-default">
-                        {service.label}
-                      </span>
-                      {index < services.length - 1 && (
-                        <span className="text-border mx-3">|</span>
-                      )}
-                    </span>
+                  {services.map((service) => (
+                    <div
+                      key={service.label}
+                      className="group/icon relative h-10 w-10 flex items-center justify-center cursor-default"
+                      title={service.label}
+                    >
+                      <service.icon className="h-5 w-5 text-muted-foreground/50 group-hover/icon:text-primary transition-colors duration-300" />
+                    </div>
                   ))}
+                  {/* Blinking cursor */}
+                  <motion.span
+                    animate={{ opacity: [1, 0] }}
+                    transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+                    className="text-primary font-mono text-lg ml-1"
+                  >
+                    ▌
+                  </motion.span>
                 </motion.div>
 
                 {/* CTAs */}

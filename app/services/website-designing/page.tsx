@@ -8,14 +8,15 @@ import {
   MousePointer,
   Sparkles,
   ArrowRight,
-  Check,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PageHero } from "@/components/sections/page-hero";
-import { CTA } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/effects/motion";
 
 export const metadata: Metadata = {
   title: "Website Designing Services",
@@ -70,40 +71,7 @@ const features = [
   },
 ];
 
-const designProcess = [
-  {
-    step: 1,
-    title: "Research",
-    description: "Understand your brand, audience, competitors, and goals.",
-  },
-  {
-    step: 2,
-    title: "Wireframes",
-    description: "Low-fidelity layouts to establish information architecture.",
-  },
-  {
-    step: 3,
-    title: "Visual Design",
-    description: "High-fidelity designs with colors, typography, and imagery.",
-  },
-  {
-    step: 4,
-    title: "Prototyping",
-    description: "Interactive prototypes for user testing and stakeholder review.",
-  },
-  {
-    step: 5,
-    title: "Iteration",
-    description: "Refine designs based on feedback and usability testing.",
-  },
-  {
-    step: 6,
-    title: "Handoff",
-    description: "Developer-ready assets with style guides and specifications.",
-  },
-];
-
-const tools = [
+const techStack = [
   "Figma",
   "Adobe XD",
   "Sketch",
@@ -114,149 +82,159 @@ const tools = [
   "Principle",
 ];
 
+const process = [
+  {
+    step: "01",
+    title: "Research",
+    description: "Understand your brand, audience, competitors, and goals.",
+  },
+  {
+    step: "02",
+    title: "Wireframes",
+    description: "Low-fidelity layouts to establish information architecture.",
+  },
+  {
+    step: "03",
+    title: "Visual Design",
+    description: "High-fidelity designs with colors, typography, and imagery.",
+  },
+  {
+    step: "04",
+    title: "Prototyping",
+    description: "Interactive prototypes for user testing and stakeholder review.",
+  },
+  {
+    step: "05",
+    title: "Iteration",
+    description: "Refine designs based on feedback and usability testing.",
+  },
+  {
+    step: "06",
+    title: "Handoff",
+    description: "Developer-ready assets with style guides and specifications.",
+  },
+];
+
 export default function WebsiteDesigningPage() {
   return (
     <>
       <Header />
       <main>
-        <PageHero
-          badge="Website Designing"
-          title="Design That Converts"
-          description="We create beautiful, user-centered website designs that not only look stunning but drive real business results. From wireframes to pixel-perfect mockups."
-        />
-
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                What We Offer
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Complete Design Services
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                From initial concepts to production-ready designs, we cover every aspect
-                of website design.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature) => (
-                <StaggerItem key={feature.title}>
-                  <div className="p-6 bg-background border border-border rounded-xl h-full">
-                    <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <feature.icon className="h-7 w-7 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
         <section className="py-20 md:py-28 bg-background">
           <div className="container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative border-l-2 border-primary pl-6 md:pl-10 pb-8 md:pb-12">
+              {/* Fading bottom line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+              {/* Corner markers */}
+              <div className="absolute -bottom-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+              <div className="absolute -top-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+
+              {/* 1. Header */}
               <FadeIn>
-                <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                  Tools We Use
+                <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                  {"// Website Designing"}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Industry-Standard Tools
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8">
-                  We use the best design tools in the industry to deliver high-quality,
-                  production-ready designs.
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4">
+                  Design That <span className="text-primary">Converts</span>
+                </h1>
+                <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+                  We create beautiful, user-centered website designs that not only
+                  look stunning but drive real business results. From wireframes to
+                  pixel-perfect mockups.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  {tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="px-4 py-2 bg-secondary border border-border rounded-full text-sm"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
               </FadeIn>
 
-              <FadeIn delay={0.2}>
-                <div className="bg-card border border-border rounded-2xl p-8">
-                  <h3 className="text-xl font-semibold mb-6">Why Choose Us?</h3>
-                  <ul className="space-y-4">
-                    {[
-                      "Conversion-focused design philosophy",
-                      "Mobile-first responsive approach",
-                      "Accessibility and WCAG compliance",
-                      "Brand consistency across all pages",
-                      "Unlimited revisions until you're happy",
-                      "Fast turnaround times",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
+              {/* 2. What We Offer */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// What We Offer"}
+                  </span>
+                </FadeIn>
+
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+                  {features.map((feature) => (
+                    <StaggerItem key={feature.title}>
+                      <div className="relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 group">
+                        <feature.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                        <div className="relative">
+                          <feature.icon className="h-5 w-5 text-primary mb-3" />
+                          <h3 className="text-base font-bold text-foreground mb-1">{feature.title}</h3>
+                          <p className="text-sm text-muted-foreground font-mono">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+
+              {/* 3. Tech Stack */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// Tech Stack"}
+                  </span>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs font-mono px-3 py-1.5 border border-border rounded-md text-muted-foreground"
+                      >
+                        {tech}
+                      </span>
                     ))}
-                  </ul>
-                </div>
-              </FadeIn>
+                  </div>
+                </FadeIn>
+              </div>
+
+              {/* 4. Process */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// Process"}
+                  </span>
+                </FadeIn>
+
+                <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6">
+                  {process.map((item) => (
+                    <StaggerItem key={item.title}>
+                      <div className="border border-border rounded-xl p-4 hover:border-primary/50 transition-colors">
+                        <span className="text-xs font-mono text-primary">
+                          {item.step}.
+                        </span>
+                        <h3 className="text-base font-bold mt-1">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {item.description}
+                        </p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+
+              {/* 5. CTA */}
+              <div className="mt-14">
+                <FadeIn className="text-center">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                    Ready for a Stunning Website?
+                  </h2>
+                  <p className="text-muted-foreground mb-6 text-base">
+                    Let&apos;s create a design that captures your brand and converts
+                    visitors.
+                  </p>
+                  <Button asChild size="lg">
+                    <Link href="/contact">
+                      Start Your Project
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </FadeIn>
+              </div>
             </div>
           </div>
         </section>
-
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                Our Process
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Design Process
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A systematic approach that ensures your design meets business goals and
-                user needs.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {designProcess.map((step) => (
-                <StaggerItem key={step.title}>
-                  <div className="text-center p-6">
-                    <div className="inline-flex h-16 w-16 rounded-full bg-primary items-center justify-center text-2xl font-bold text-primary-foreground mb-6">
-                      {step.step}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.description}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container text-center">
-            <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready for a Stunning Website?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-                Let&apos;s create a design that captures your brand and converts visitors.
-              </p>
-              <Button asChild size="lg" className="text-lg px-8 py-6 h-auto">
-                <Link href="/contact">
-                  Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </FadeIn>
-          </div>
-        </section>
-
-        <CTA />
       </main>
       <Footer />
     </>

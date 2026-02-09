@@ -1,17 +1,15 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Target, Users, Lightbulb, Heart } from "lucide-react";
+import { ArrowRight, Lightbulb, Target, Users, Heart } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PageHero } from "@/components/sections/page-hero";
-import { CTA } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Workrush - a digital agency helping businesses transform their ideas into successful products. Meet our team and discover our mission.",
+    "Learn about Workrush - a digital agency helping businesses transform their ideas into successful products. Discover our mission and values.",
   alternates: {
     canonical: "/about",
   },
@@ -33,49 +31,26 @@ const values = [
   {
     title: "Innovation",
     description:
-      "We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive advantage.",
+      "Staying ahead of technology trends to deliver cutting-edge solutions.",
     icon: Lightbulb,
   },
   {
     title: "Quality",
     description:
-      "We never compromise on quality. Every line of code, every pixel, and every strategy is crafted with excellence.",
+      "Every line of code and every pixel crafted with excellence.",
     icon: Target,
   },
   {
     title: "Collaboration",
     description:
-      "We work closely with our clients, treating their goals as our own and building lasting partnerships.",
+      "Treating your goals as our own and building lasting partnerships.",
     icon: Users,
   },
   {
     title: "Integrity",
     description:
-      "Transparency and honesty guide everything we do. We deliver what we promise, on time and on budget.",
+      "Transparency and honesty in everything we do, on time and on budget.",
     icon: Heart,
-  },
-];
-
-const team = [
-  {
-    name: "Alex Thompson",
-    role: "Founder & CEO",
-    bio: "15+ years in tech leadership, passionate about building products that scale.",
-  },
-  {
-    name: "Sarah Chen",
-    role: "Head of Design",
-    bio: "Award-winning designer with expertise in user-centered design principles.",
-  },
-  {
-    name: "Marcus Williams",
-    role: "Lead Developer",
-    bio: "Full-stack expert specializing in React, Node.js, and cloud architecture.",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Marketing Director",
-    bio: "Digital marketing strategist with a track record of driving growth.",
   },
 ];
 
@@ -84,159 +59,119 @@ export default function AboutPage() {
     <>
       <Header />
       <main>
-        <PageHero
-          badge="About Us"
-          title="Building Digital Products That Matter"
-          description="We're a team of passionate technologists, designers, and strategists dedicated to helping businesses succeed in the digital age."
-        />
+        <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+          <div className="container relative">
+            {/* Terminal-style border */}
+            <div className="relative border-l-2 border-primary pl-6 md:pl-10 pb-8 md:pb-12">
+              {/* Fading bottom line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+              {/* Corner markers */}
+              <div className="absolute -bottom-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+              <div className="absolute -top-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
 
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <FadeIn>
-                <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                  Our Story
+              {/* About Header */}
+              <FadeIn className="mb-10 md:mb-14">
+                <span className="inline-block text-sm font-mono text-primary mb-3 uppercase tracking-wider">
+                  {"// About"}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  From Vision to Reality
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  Building Digital Products That{" "}
+                  <span className="text-primary">Matter</span>
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-2xl">
+                  We&apos;re a team of passionate technologists, designers, and
+                  strategists dedicated to helping businesses succeed in the
+                  digital age.
+                </p>
+              </FadeIn>
+
+              {/* Our Story + Stats */}
+              <FadeIn delay={0.1} className="mb-10 md:mb-14">
+                <h2 className="text-sm font-mono text-primary mb-4 uppercase tracking-wider">
+                  {"// Our Story"}
                 </h2>
-                <div className="space-y-4 text-muted-foreground">
-                  <p>
-                    Workrush was founded with a simple mission: to help businesses
-                    transform their ideas into successful digital products. We saw too
-                    many great ideas fail due to poor execution, and we set out to
-                    change that.
-                  </p>
-                  <p>
-                    Today, we&apos;re proud to be a trusted partner for businesses
-                    across the UK and Europe. From startups launching their first MVP
-                    to enterprises scaling their operations, we bring the same passion
-                    and dedication to every project.
-                  </p>
-                  <p>
-                    Our team combines technical expertise with creative thinking to
-                    deliver solutions that not only work but delight users and drive
-                    business growth.
-                  </p>
+                <div className="grid lg:grid-cols-2 gap-10 items-start">
+                  <div className="space-y-4 text-muted-foreground text-base leading-relaxed">
+                    <p>
+                      Workrush was founded with a simple mission: to help
+                      businesses transform their ideas into successful digital
+                      products. We saw too many great ideas fail due to poor
+                      execution, and we set out to change that.
+                    </p>
+                    <p>
+                      Today, we&apos;re proud to be a trusted partner for
+                      businesses across the UK and Europe. From startups
+                      launching their first MVP to enterprises scaling their
+                      operations, we bring the same passion and dedication to
+                      every project.
+                    </p>
+                    <p>
+                      Our team combines technical expertise with creative
+                      thinking to deliver solutions that not only work but
+                      delight users and drive business growth.
+                    </p>
+                  </div>
+
+                  <StaggerContainer className="grid grid-cols-2 gap-3">
+                    {stats.map((stat) => (
+                      <StaggerItem key={stat.label}>
+                        <div className="border border-border rounded-xl p-5 text-center hover:border-primary/50 transition-colors">
+                          <div className="text-2xl font-mono font-bold text-primary mb-1">
+                            {stat.value}
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            {stat.label}
+                          </div>
+                        </div>
+                      </StaggerItem>
+                    ))}
+                  </StaggerContainer>
                 </div>
               </FadeIn>
 
-              <FadeIn delay={0.2}>
-                <div className="grid grid-cols-2 gap-6">
-                  {stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="bg-background border border-border rounded-xl p-6 text-center"
-                    >
-                      <div className="text-4xl font-mono font-bold text-primary mb-2">
-                        {stat.value}
+              {/* Our Values */}
+              <FadeIn delay={0.2} className="mb-10 md:mb-14">
+                <h2 className="text-sm font-mono text-primary mb-4 uppercase tracking-wider">
+                  {"// Our Values"}
+                </h2>
+                <StaggerContainer className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {values.map((value) => (
+                    <StaggerItem key={value.title}>
+                      <div className="group relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300">
+                        {/* Background icon */}
+                        <value.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                        <div className="relative">
+                          <div className="text-base font-bold text-foreground mb-1">
+                            {value.title}
+                          </div>
+                          <div className="text-xs text-muted-foreground font-mono">
+                            {value.description}
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-muted-foreground text-sm">{stat.label}</div>
-                    </div>
+                    </StaggerItem>
                   ))}
-                </div>
+                </StaggerContainer>
+              </FadeIn>
+
+              {/* CTA */}
+              <FadeIn delay={0.3} className="text-center pt-4">
+                <h2 className="text-lg font-semibold mb-2">
+                  Ready to Work With Us?
+                </h2>
+                <p className="text-base text-muted-foreground mb-5">
+                  Let&apos;s discuss how we can help bring your vision to life.
+                </p>
+                <Button asChild className="bg-primary hover:bg-primary/90">
+                  <Link href="/contact">
+                    Get in Touch
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </FadeIn>
             </div>
           </div>
         </section>
-
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                Our Values
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                What Drives Us
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our core values guide every decision we make and every project we
-                undertake.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value) => (
-                <StaggerItem key={value.title}>
-                  <div className="text-center p-6">
-                    <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                      <value.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                Our Team
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Meet the People Behind Workrush
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A talented team of experts dedicated to your success.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {team.map((member) => (
-                <StaggerItem key={member.name}>
-                  <div className="bg-background border border-border rounded-2xl p-6 text-center">
-                    <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl font-bold text-primary">
-                        {member.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-                    <p className="text-primary text-sm mb-3">{member.role}</p>
-                    <p className="text-muted-foreground text-sm">{member.bio}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container text-center">
-            <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Work With Us?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-                Let&apos;s discuss how we can help bring your vision to life.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg px-8 py-6 h-auto">
-                  <Link href="/contact">
-                    Get in Touch
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-6 h-auto"
-                >
-                  <Link href="/portfolio">View Our Work</Link>
-                </Button>
-              </div>
-            </FadeIn>
-          </div>
-        </section>
-
-        <CTA />
       </main>
       <Footer />
     </>
