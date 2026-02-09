@@ -3,16 +3,17 @@ import Link from "next/link";
 import {
   Smartphone,
   Globe,
-  Palette,
+  BrainCircuit,
+  Cloud,
+  Rocket,
   Gamepad2,
-  TrendingUp,
   Blocks,
+  Palette,
+  TrendingUp,
   ChevronRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PageHero } from "@/components/sections/page-hero";
-import { CTA } from "@/components/sections/cta";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
 
 export const metadata: Metadata = {
@@ -47,12 +48,28 @@ const services = [
     features: ["React & Next.js", "Node.js & APIs", "Cloud Deployment"],
   },
   {
-    title: "Website Designing",
+    title: "AI & ML Solutions",
     description:
-      "Stunning UI/UX designs that convert. From wireframes to production-ready designs that delight users.",
-    icon: Palette,
-    href: "/services/website-designing",
-    features: ["UI/UX Design", "Figma Prototypes", "Responsive Design"],
+      "Custom chatbots, AI agents, RAG systems, and LLM integrations that automate workflows and scale your business.",
+    icon: BrainCircuit,
+    href: "/services/ai-ml-solutions",
+    features: ["Chatbots & AI Agents", "LLM Integration", "RAG Systems"],
+  },
+  {
+    title: "Cloud & DevOps",
+    description:
+      "Scalable cloud infrastructure, CI/CD pipelines, and DevOps automation. Ship faster, scale smarter.",
+    icon: Cloud,
+    href: "/services/cloud-devops",
+    features: ["AWS, GCP & Azure", "Docker & Kubernetes", "CI/CD Pipelines"],
+  },
+  {
+    title: "SaaS Development",
+    description:
+      "End-to-end SaaS products with multi-tenancy, billing, auth, and dashboards. From MVP to MRR.",
+    icon: Rocket,
+    href: "/services/saas-development",
+    features: ["Multi-Tenant Architecture", "Subscription Billing", "MVP in 6-8 Weeks"],
   },
   {
     title: "Game Development",
@@ -63,20 +80,28 @@ const services = [
     features: ["Unity & Unreal", "Mobile Games", "3D & 2D Games"],
   },
   {
-    title: "Digital Marketing",
-    description:
-      "SEO, PPC, social media, and content marketing to grow your online presence and drive conversions.",
-    icon: TrendingUp,
-    href: "/services/digital-marketing",
-    features: ["SEO & SEM", "Social Media", "Content Strategy"],
-  },
-  {
     title: "Web3 Development",
     description:
       "Blockchain, smart contracts, DeFi, and NFT solutions for the decentralized web and future of finance.",
     icon: Blocks,
     href: "/services/web3-development",
     features: ["Smart Contracts", "DeFi & NFTs", "Blockchain Integration"],
+  },
+  {
+    title: "Website Designing",
+    description:
+      "Stunning UI/UX designs that convert. From wireframes to production-ready designs that delight users.",
+    icon: Palette,
+    href: "/services/website-designing",
+    features: ["UI/UX Design", "Figma Prototypes", "Responsive Design"],
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "SEO, PPC, social media, and content marketing to grow your online presence and drive conversions.",
+    icon: TrendingUp,
+    href: "/services/digital-marketing",
+    features: ["SEO & SEM", "Social Media", "Content Strategy"],
   },
 ];
 
@@ -85,92 +110,72 @@ export default function ServicesPage() {
     <>
       <Header />
       <main>
-        <PageHero
-          badge="What We Do"
-          title="End-to-End Digital Solutions"
-          description="We deliver comprehensive technology services to transform your ideas into successful digital products. From concept to launch and beyond."
-        />
+        <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+          <div className="container relative">
+            {/* Terminal-style border */}
+            <div className="relative border-l-2 border-primary pl-6 md:pl-10 pb-8 md:pb-12">
+              {/* Fading bottom line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+              {/* Corner markers */}
+              <div className="absolute -bottom-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+              <div className="absolute -top-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
 
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service) => (
-                <StaggerItem key={service.title}>
-                  <Link
-                    href={service.href}
-                    className="group block p-8 bg-background border border-border rounded-2xl hover:border-primary/50 transition-all h-full"
-                  >
-                    <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                      <service.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="text-sm text-muted-foreground flex items-center gap-2"
-                        >
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <span className="inline-flex items-center text-sm font-medium text-primary">
-                      Learn More
-                      <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+              {/* Header */}
+              <FadeIn className="mb-10 md:mb-14">
+                <span className="inline-block text-sm font-mono text-primary mb-3 uppercase tracking-wider">
+                  {"// Services"}
+                </span>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  What We <span className="text-primary">Build</span>
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-2xl">
+                  End-to-end digital services to transform your ideas into
+                  successful products. From concept to launch and beyond.
+                </p>
+              </FadeIn>
+
+              {/* Services Grid */}
+              <FadeIn delay={0.1}>
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {services.map((service) => (
+                    <StaggerItem key={service.title}>
+                      <Link
+                        href={service.href}
+                        className="group relative overflow-hidden block p-5 border border-border rounded-xl hover:border-primary/50 transition-all h-full"
+                      >
+                        {/* Background icon */}
+                        <service.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+
+                        <div className="relative">
+                          <h3 className="text-base font-bold mb-2 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground mb-3">
+                            {service.description}
+                          </p>
+                          <div className="flex flex-wrap gap-1.5 mb-4">
+                            {service.features.map((feature) => (
+                              <span
+                                key={feature}
+                                className="text-xs font-mono text-primary"
+                              >
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
+                          <span className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
+                            Learn more
+                            <ChevronRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                          </span>
+                        </div>
+                      </Link>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </FadeIn>
+            </div>
           </div>
         </section>
-
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container">
-            <FadeIn className="text-center max-w-3xl mx-auto">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                Why Choose Us
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                We Build Products That Matter
-              </h2>
-              <p className="text-lg text-muted-foreground mb-12">
-                With years of experience and a passion for innovation, we help businesses
-                of all sizes achieve their digital goals.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <StaggerItem className="text-center p-8">
-                <div className="text-5xl font-mono font-bold text-primary mb-4">50+</div>
-                <div className="text-lg font-semibold mb-2">Projects Delivered</div>
-                <p className="text-muted-foreground">
-                  Successfully launched projects across multiple industries
-                </p>
-              </StaggerItem>
-              <StaggerItem className="text-center p-8">
-                <div className="text-5xl font-mono font-bold text-primary mb-4">99%</div>
-                <div className="text-lg font-semibold mb-2">Client Satisfaction</div>
-                <p className="text-muted-foreground">
-                  Our clients love working with us and keep coming back
-                </p>
-              </StaggerItem>
-              <StaggerItem className="text-center p-8">
-                <div className="text-5xl font-mono font-bold text-primary mb-4">24/7</div>
-                <div className="text-lg font-semibold mb-2">Support Available</div>
-                <p className="text-muted-foreground">
-                  Round-the-clock support to keep your business running
-                </p>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <CTA />
       </main>
       <Footer />
     </>

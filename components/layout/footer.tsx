@@ -3,22 +3,10 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
-const basePath = process.env.NODE_ENV === "production" ? "/workrush-web" : "";
-
-const services = [
-  { name: "App Development", href: "/services/app-development" },
-  { name: "Web Development", href: "/services/web-development" },
-  { name: "Website Designing", href: "/services/website-designing" },
-  { name: "Game Development", href: "/services/game-development" },
-  { name: "Digital Marketing", href: "/services/digital-marketing" },
-  { name: "Web3 Development", href: "/services/web3-development" },
-];
-
-const quickLinks = [
+const navLinks = [
   { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Blog", href: "/blog" },
-  { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -37,11 +25,11 @@ export function Footer() {
       <div className="container py-12 md:py-16 lg:py-20">
         {/* Main footer content */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
-          {/* Brand Column - Full width on mobile */}
-          <div className="col-span-2 md:col-span-2 lg:col-span-4 space-y-4 md:space-y-6">
+          {/* Brand Column */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-5 space-y-4 md:space-y-6">
             <Link href="/" className="inline-block">
               <Image
-                src={`${basePath}/images/logo-h.png`}
+                src="/images/logo-h.png"
                 alt="Workrush"
                 width={140}
                 height={35}
@@ -69,33 +57,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services Column */}
+          {/* Navigation Column */}
           <div className="col-span-1 lg:col-span-3">
-            <h3 className="text-xs md:text-sm font-mono text-primary mb-4 md:mb-6 uppercase tracking-wider">
-              {"// Services"}
-            </h3>
-            <ul className="space-y-2 md:space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    href={service.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm inline-flex items-center gap-1 group"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowUpRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all hidden md:block" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links Column */}
-          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-xs md:text-sm font-mono text-primary mb-4 md:mb-6 uppercase tracking-wider">
               {"// Company"}
             </h3>
             <ul className="space-y-2 md:space-y-3">
-              {quickLinks.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -109,8 +77,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column - Full width on mobile */}
-          <div className="col-span-2 lg:col-span-3 pt-4 md:pt-0 border-t border-border md:border-t-0">
+          {/* Contact Column */}
+          <div className="col-span-1 lg:col-span-4 pt-0">
             <h3 className="text-xs md:text-sm font-mono text-primary mb-4 md:mb-6 uppercase tracking-wider">
               {"// Contact"}
             </h3>
@@ -157,12 +125,24 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4 md:gap-6">
               <Link
+                href="/blog"
+                className="text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/careers"
+                className="text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm"
+              >
+                Careers
+              </Link>
+              <span className="text-border">|</span>
+              <Link
                 href="/privacy"
                 className="text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm"
               >
                 Privacy
               </Link>
-              <span className="text-border">|</span>
               <Link
                 href="/terms"
                 className="text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm"

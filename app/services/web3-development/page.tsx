@@ -8,14 +8,15 @@ import {
   Wallet,
   Shield,
   ArrowRight,
-  Check,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PageHero } from "@/components/sections/page-hero";
-import { CTA } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/effects/motion";
 
 export const metadata: Metadata = {
   title: "Web3 Development Services",
@@ -85,45 +86,34 @@ const techStack = [
   "The Graph",
 ];
 
-const useCases = [
-  "Token Creation",
-  "DEX Development",
-  "Lending Protocols",
-  "NFT Marketplaces",
-  "DAO Platforms",
-  "Staking Solutions",
-  "Bridge Development",
-  "GameFi Projects",
-];
-
 const process = [
   {
-    step: 1,
+    step: "01",
     title: "Consultation",
     description: "Understand your Web3 vision, use case, and tokenomics.",
   },
   {
-    step: 2,
+    step: "02",
     title: "Architecture",
     description: "Design smart contract architecture and system design.",
   },
   {
-    step: 3,
+    step: "03",
     title: "Development",
     description: "Build smart contracts and frontend with best practices.",
   },
   {
-    step: 4,
+    step: "04",
     title: "Testing",
     description: "Extensive testing on testnets with edge case coverage.",
   },
   {
-    step: 5,
+    step: "05",
     title: "Audit",
     description: "Security audit and vulnerability assessment.",
   },
   {
-    step: 6,
+    step: "06",
     title: "Deployment",
     description: "Mainnet deployment with monitoring and documentation.",
   },
@@ -134,157 +124,120 @@ export default function Web3DevelopmentPage() {
     <>
       <Header />
       <main>
-        <PageHero
-          badge="Web3 Development"
-          title="Build the Decentralized Future"
-          description="From smart contracts to full-stack dApps, we help you navigate the Web3 landscape and build secure, scalable blockchain solutions."
-        />
-
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                What We Offer
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                End-to-End Web3 Solutions
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive blockchain development services from smart contracts to
-                user-facing applications.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature) => (
-                <StaggerItem key={feature.title}>
-                  <div className="p-6 bg-background border border-border rounded-xl h-full">
-                    <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <feature.icon className="h-7 w-7 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
         <section className="py-20 md:py-28 bg-background">
           <div className="container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative border-l-2 border-primary pl-6 md:pl-10 pb-8 md:pb-12">
+              {/* Fading bottom line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+              {/* Corner markers */}
+              <div className="absolute -bottom-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+              <div className="absolute -top-[5px] -left-[5px] text-primary font-mono text-sm">+</div>
+
+              {/* 1. Header */}
               <FadeIn>
-                <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                  Technologies
+                <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                  {"// Web3 Development"}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Blockchain Tech Stack
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8">
-                  We work with leading blockchain platforms and tools to deliver secure,
-                  efficient Web3 solutions.
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4">
+                  Build the <span className="text-primary">Decentralized</span> Future
+                </h1>
+                <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+                  From smart contracts to full-stack dApps, we help you navigate the
+                  Web3 landscape and build secure, scalable blockchain solutions.
                 </p>
-                <div className="flex flex-wrap gap-3 mb-8">
-                  {techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-4 py-2 bg-secondary border border-border rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <h3 className="text-xl font-semibold mb-4">Use Cases</h3>
-                <div className="flex flex-wrap gap-2">
-                  {useCases.map((useCase) => (
-                    <span
-                      key={useCase}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                    >
-                      {useCase}
-                    </span>
-                  ))}
-                </div>
               </FadeIn>
 
-              <FadeIn delay={0.2}>
-                <div className="bg-card border border-border rounded-2xl p-8">
-                  <h3 className="text-xl font-semibold mb-6">Why Choose Us?</h3>
-                  <ul className="space-y-4">
-                    {[
-                      "Deep expertise in Solidity and Rust",
-                      "Security-first development approach",
-                      "Experience with major DeFi protocols",
-                      "Gas-optimized smart contracts",
-                      "Comprehensive documentation",
-                      "Post-launch support and upgrades",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
+              {/* 2. What We Offer */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// What We Offer"}
+                  </span>
+                </FadeIn>
+
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
+                  {features.map((feature) => (
+                    <StaggerItem key={feature.title}>
+                      <div className="relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 group">
+                        <feature.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                        <div className="relative">
+                          <feature.icon className="h-5 w-5 text-primary mb-3" />
+                          <h3 className="text-base font-bold text-foreground mb-1">{feature.title}</h3>
+                          <p className="text-sm text-muted-foreground font-mono">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+
+              {/* 3. Tech Stack */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// Tech Stack"}
+                  </span>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs font-mono px-3 py-1.5 border border-border rounded-md text-muted-foreground"
+                      >
+                        {tech}
+                      </span>
                     ))}
-                  </ul>
-                </div>
-              </FadeIn>
+                  </div>
+                </FadeIn>
+              </div>
+
+              {/* 4. Process */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// Process"}
+                  </span>
+                </FadeIn>
+
+                <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6">
+                  {process.map((item) => (
+                    <StaggerItem key={item.title}>
+                      <div className="border border-border rounded-xl p-4 hover:border-primary/50 transition-colors">
+                        <span className="text-xs font-mono text-primary">
+                          {item.step}.
+                        </span>
+                        <h3 className="text-base font-bold mt-1">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {item.description}
+                        </p>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+
+              {/* 5. CTA */}
+              <div className="mt-14">
+                <FadeIn className="text-center">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                    Ready to Build on Web3?
+                  </h2>
+                  <p className="text-muted-foreground mb-6 text-base">
+                    Let&apos;s discuss your blockchain project and bring your
+                    decentralized vision to life.
+                  </p>
+                  <Button asChild size="lg">
+                    <Link href="/contact">
+                      Start Your Project
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </FadeIn>
+              </div>
             </div>
           </div>
         </section>
-
-        <section className="py-20 md:py-28 bg-card">
-          <div className="container">
-            <FadeIn className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
-                Our Process
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Web3 Development Pipeline
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A rigorous process that ensures security, reliability, and success for your
-                Web3 project.
-              </p>
-            </FadeIn>
-
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {process.map((step) => (
-                <StaggerItem key={step.title}>
-                  <div className="text-center p-6">
-                    <div className="inline-flex h-16 w-16 rounded-full bg-primary items-center justify-center text-2xl font-bold text-primary-foreground mb-6">
-                      {step.step}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.description}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container text-center">
-            <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Build on Web3?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-                Let&apos;s discuss your blockchain project and bring your decentralized
-                vision to life.
-              </p>
-              <Button asChild size="lg" className="text-lg px-8 py-6 h-auto">
-                <Link href="/contact">
-                  Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </FadeIn>
-          </div>
-        </section>
-
-        <CTA />
       </main>
       <Footer />
     </>

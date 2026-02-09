@@ -8,6 +8,9 @@ import {
   Gamepad2,
   TrendingUp,
   Blocks,
+  BrainCircuit,
+  Cloud,
+  Rocket,
   ArrowUpRight,
 } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
@@ -30,12 +33,28 @@ const services = [
     highlight: true,
   },
   {
-    title: "Website Designing",
-    description: "Stunning UI/UX designs that convert. Figma prototypes to production-ready designs.",
-    icon: Palette,
-    href: "/services/website-designing",
-    tags: ["UI/UX", "Figma", "Responsive"],
+    title: "AI & ML Solutions",
+    description: "Custom chatbots, AI agents, RAG systems, and LLM integrations that automate and scale your business.",
+    icon: BrainCircuit,
+    href: "/services/ai-ml-solutions",
+    tags: ["ChatBots", "LLM", "AI Agents", "RAG"],
+    highlight: true,
+  },
+  {
+    title: "Cloud & DevOps",
+    description: "Scalable cloud infrastructure, CI/CD pipelines, and DevOps automation on AWS, GCP, and Azure.",
+    icon: Cloud,
+    href: "/services/cloud-devops",
+    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
     highlight: false,
+  },
+  {
+    title: "SaaS Development",
+    description: "End-to-end SaaS products with multi-tenancy, billing, auth, dashboards — from MVP to scale.",
+    icon: Rocket,
+    href: "/services/saas-development",
+    tags: ["Multi-Tenant", "Stripe", "MVP", "Scale"],
+    highlight: true,
   },
   {
     title: "Game Development",
@@ -46,19 +65,27 @@ const services = [
     highlight: false,
   },
   {
-    title: "Digital Marketing",
-    description: "SEO, PPC, social media, and content marketing to grow your online presence.",
-    icon: TrendingUp,
-    href: "/services/digital-marketing",
-    tags: ["SEO", "PPC", "Social Media"],
-    highlight: false,
-  },
-  {
     title: "Web3 Development",
     description: "Blockchain, smart contracts, DeFi, and NFT solutions for the decentralized web.",
     icon: Blocks,
     href: "/services/web3-development",
     tags: ["Blockchain", "Smart Contracts", "DeFi"],
+    highlight: false,
+  },
+  {
+    title: "Website Designing",
+    description: "Stunning UI/UX designs that convert. Figma prototypes to production-ready designs.",
+    icon: Palette,
+    href: "/services/website-designing",
+    tags: ["UI/UX", "Figma", "Responsive"],
+    highlight: false,
+  },
+  {
+    title: "Digital Marketing",
+    description: "SEO, PPC, social media, and content marketing to grow your online presence.",
+    icon: TrendingUp,
+    href: "/services/digital-marketing",
+    tags: ["SEO", "PPC", "Social Media"],
     highlight: false,
   },
 ];
@@ -101,6 +128,9 @@ export function ServicesGrid() {
                   href={service.href}
                   className="group relative flex flex-col h-full p-6 md:p-8 bg-background border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_rgba(11,148,68,0.15)]"
                 >
+                  {/* Background icon */}
+                  <service.icon className="absolute -bottom-4 -right-4 h-28 w-28 text-primary/50 group-hover:text-primary/80 transition-colors duration-500" />
+
                   {/* Hover glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -108,8 +138,8 @@ export function ServicesGrid() {
                   <div className="relative z-10 flex flex-col h-full">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
-                      <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">
-                        <service.icon className="h-6 w-6 text-primary" />
+                      <div className="h-10 w-10 rounded-lg flex items-center justify-center">
+                        <service.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div className="h-10 w-10 rounded-full border border-border flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-primary/50 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
                         <ArrowUpRight className="h-4 w-4 text-primary" />
