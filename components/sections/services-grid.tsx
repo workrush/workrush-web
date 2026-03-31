@@ -81,12 +81,12 @@ const services = [
     highlight: false,
   },
   {
-    title: "Digital Marketing",
-    description: "SEO, PPC, social media, and content marketing to grow your online presence.",
+    title: "Digital Marketing & AI Discovery",
+    description: "SEO, PPC, social media, AEO, and AI search optimization to grow your presence everywhere — traditional and AI.",
     icon: TrendingUp,
     href: "/services/digital-marketing",
-    tags: ["SEO", "PPC", "Social Media"],
-    highlight: false,
+    tags: ["SEO", "AEO", "AI Search", "PPC"],
+    highlight: true,
   },
 ];
 
@@ -126,7 +126,7 @@ export function ServicesGrid() {
               >
                 <Link
                   href={service.href}
-                  className="group relative flex flex-col h-full p-6 md:p-8 bg-background border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_rgba(11,148,68,0.15)]"
+                  className="group relative flex flex-col h-full p-6 md:p-8 bg-background border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_rgba(11,148,68,0.15)]"
                 >
                   {/* Background icon */}
                   <service.icon className="absolute -bottom-4 -right-4 h-28 w-28 text-primary/50 group-hover:text-primary/80 transition-colors duration-500" />

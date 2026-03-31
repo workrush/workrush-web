@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/privacy",
   },
+  openGraph: {
+    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Workrush Privacy Policy" }],
+  },
 };
 
 const sections = [

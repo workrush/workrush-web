@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Lato, Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/lib/config";
-import { OrganizationSchema } from "@/components/structured-data";
+import { OrganizationSchema, WebSiteSchema } from "@/components/structured-data";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -19,7 +20,7 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Workrush | Build Digital Products That Scale",
+    default: "Workrush | Building Digital DNA at Scale",
     template: "%s | Workrush",
   },
   description: siteConfig.description,
@@ -32,6 +33,10 @@ export const metadata: Metadata = {
     "mobile app development",
     "cloud computing",
     "AI solutions",
+    "AEO",
+    "AI discoverability",
+    "digital marketing",
+    "SaaS development",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -45,9 +50,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Workrush | Build Digital Products That Scale",
+    title: "Workrush | Building Digital DNA at Scale",
     description:
-      "From MVP to enterprise, we ship fast without compromising quality. Trusted by 50+ businesses across UK and Europe.",
+      "From MVP to enterprise, we ship fast without compromising quality. Trusted by 150+ businesses across UK, Europe, and Asia.",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_GB",
@@ -57,14 +62,14 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Workrush - Build Digital Products That Scale",
+        alt: "Workrush - Building Digital DNA at Scale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Workrush | Build Digital Products That Scale",
-    description: "From MVP to enterprise, we ship fast without compromising quality.",
+    title: "Workrush | Building Digital DNA at Scale",
+    description: "From MVP to enterprise, we ship fast without compromising quality. 150+ projects delivered.",
     images: ["/og-image.svg"],
   },
   alternates: {
@@ -81,11 +86,44 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <OrganizationSchema />
+        <WebSiteSchema />
       </head>
       <body
         className={`${lato.variable} ${spaceMono.variable} font-sans antialiased`}
       >
         {children}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-GPLQ03V0ZH" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js',new Date());
+            gtag('config','G-GPLQ03V0ZH');`}
+        </Script>
+        <Script id="cal-embed" strategy="afterInteractive">
+          {`(function(){
+            var s=document.createElement('script');
+            s.src='https://cal.eu/embed/embed.js';
+            s.async=true;
+            s.onload=function(){
+              var t=setInterval(function(){
+                if(window.Cal){
+                  clearInterval(t);
+                  window.Cal("init",{origin:"https://cal.eu"});
+                  window.Cal("floatingButton",{calLink:"workrush",buttonText:"Book a Call",config:{layout:"month_view"}});
+                  window.Cal("ui",{hideEventTypeDetails:false,layout:"month_view"});
+                }
+              },50);
+            };
+            document.head.appendChild(s);
+          })();`}
+        </Script>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window,document,"clarity","script","w3xuhxtyuz");`}
+        </Script>
       </body>
     </html>
   );

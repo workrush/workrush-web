@@ -5,13 +5,13 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/moti
 
 const stats = [
   {
-    value: "50+",
+    value: "150+",
     label: "Projects Delivered",
     description: "Apps, websites & platforms launched",
     icon: Rocket,
   },
   {
-    value: "30+",
+    value: "35+",
     label: "Happy Clients",
     description: "Startups to enterprises worldwide",
     icon: Users,
@@ -78,7 +78,7 @@ export function Stats() {
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
             {stats.map((stat) => (
               <StaggerItem key={stat.label}>
-                <div className="group relative p-6 md:p-8 bg-card/50 border border-border rounded-2xl hover:border-primary/50 transition-all duration-300">
+                <div className="group relative p-6 md:p-8 bg-card/50 border border-border rounded-lg hover:border-primary/50 transition-all duration-300">
                   {/* Icon */}
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <stat.icon className="h-6 w-6 text-primary" />

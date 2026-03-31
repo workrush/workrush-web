@@ -96,12 +96,12 @@ const services = [
     features: ["UI/UX Design", "Figma Prototypes", "Responsive Design"],
   },
   {
-    title: "Digital Marketing",
+    title: "Digital Marketing & AI Discovery",
     description:
-      "SEO, PPC, social media, and content marketing to grow your online presence and drive conversions.",
+      "SEO, PPC, social media, AEO, and AI search optimization to grow your presence everywhere — traditional and AI-powered.",
     icon: TrendingUp,
     href: "/services/digital-marketing",
-    features: ["SEO & SEM", "Social Media", "Content Strategy"],
+    features: ["SEO & AEO", "AI Search Optimization", "PPC & Social"],
   },
 ];
 

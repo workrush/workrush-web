@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight, Smartphone, Globe as GlobeIcon, Palette, Gamepad2, TrendingUp, Blocks, BrainCircuit, Cloud, Rocket } from "lucide-react";
+import { ArrowRight, CalendarDays, Smartphone, Globe as GlobeIcon, Palette, Gamepad2, TrendingUp, Blocks, BrainCircuit, Cloud, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -50,9 +50,9 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1]"
                 >
-                  We Build Digital
+                  Building Digital
                   <br />
-                  Products That <span className="text-primary">Scale</span>
+                  DNA at <span className="text-primary">Scale</span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -100,10 +100,10 @@ export function Hero() {
                   className="flex flex-col sm:flex-row gap-4"
                 >
                   <Button asChild size="lg" className="text-lg px-8 py-6 h-auto group">
-                    <Link href="/contact">
-                      Start Your Project
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <a href="https://cal.eu/workrush" target="_blank" rel="noopener noreferrer">
+                      <CalendarDays className="mr-2 h-5 w-5" />
+                      Book a Meeting
+                    </a>
                   </Button>
                   <Button
                     asChild
@@ -111,8 +111,9 @@ export function Hero() {
                     variant="outline"
                     className="text-lg px-8 py-6 h-auto"
                   >
-                    <Link href="/services">
-                      Explore Services
+                    <Link href="/contact">
+                      Start Your Project
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                 </motion.div>

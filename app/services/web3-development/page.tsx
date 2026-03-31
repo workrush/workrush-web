@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -122,6 +123,8 @@ const process = [
 export default function Web3DevelopmentPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Web3 Development", href: "/services/web3-development" }]} />
+      <ServiceSchema name="Web3 Development" description="Professional Web3 and blockchain development including smart contracts, DeFi protocols, NFT platforms, and dApps." url="/services/web3-development" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">

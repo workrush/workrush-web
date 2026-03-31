@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/careers",
   },
+  openGraph: {
+    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Workrush Careers" }],
+  },
 };
 
 const perks = [

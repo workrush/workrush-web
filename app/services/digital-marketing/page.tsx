@@ -7,9 +7,14 @@ import {
   Mail,
   BarChart3,
   Target,
+  BrainCircuit,
+  Globe,
+  FileText,
+  Bot,
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,20 +24,20 @@ import {
 } from "@/components/effects/motion";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services",
+  title: "Digital Marketing & AI Discovery Services",
   description:
-    "Comprehensive digital marketing services including SEO, PPC, social media marketing, content marketing, and email campaigns to grow your online presence.",
+    "Comprehensive digital marketing and AI discovery services. SEO, AEO, AI search optimization, PPC, social media, and LLM content strategy to grow your presence everywhere.",
   alternates: {
     canonical: "/services/digital-marketing",
   },
   openGraph: {
-    title: "Digital Marketing Services | Workrush",
+    title: "Digital Marketing & AI Discovery | Workrush",
     description:
-      "Grow your online presence with SEO, PPC, social media, and content marketing strategies.",
+      "Grow your presence across traditional search and AI-powered platforms. SEO, AEO, PPC, and AI search optimization.",
   },
 };
 
-const features = [
+const marketingFeatures = [
   {
     title: "SEO Optimization",
     description:
@@ -71,6 +76,45 @@ const features = [
   },
 ];
 
+const aiDiscoveryFeatures = [
+  {
+    title: "Answer Engine Optimization (AEO)",
+    description:
+      "Optimize your content to appear as direct answers in AI search — ChatGPT, Perplexity, Google AI Overviews, and Copilot.",
+    icon: Search,
+  },
+  {
+    title: "AI Search Optimization",
+    description:
+      "Structure your website so AI crawlers and LLMs can understand, index, and recommend your brand to users.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Brand Presence in AI",
+    description:
+      "Ensure your brand is accurately represented when users ask AI assistants about your industry or services.",
+    icon: Globe,
+  },
+  {
+    title: "LLM Content Strategy",
+    description:
+      "Create content designed for large language models — structured data, FAQs, knowledge graphs, and authoritative sources.",
+    icon: FileText,
+  },
+  {
+    title: "AI Chatbot Visibility",
+    description:
+      "Get your business recommended by AI chatbots and virtual assistants when users search for solutions you offer.",
+    icon: Bot,
+  },
+  {
+    title: "AI Monitoring & Analytics",
+    description:
+      "Track how your brand appears in AI-generated responses. Monitor mentions, accuracy, and sentiment across AI platforms.",
+    icon: BarChart3,
+  },
+];
+
 const techStack = [
   "Google Analytics",
   "Google Ads",
@@ -79,47 +123,53 @@ const techStack = [
   "Ahrefs",
   "Mailchimp",
   "HubSpot",
-  "Hootsuite",
-  "Canva",
   "Google Search Console",
+  "Schema.org Markup",
+  "Structured Data",
+  "Knowledge Graphs",
+  "Entity SEO",
+  "NLP Analysis",
+  "LLM Testing",
 ];
 
 const process = [
   {
     step: "01",
     title: "Audit",
-    description: "Comprehensive analysis of your current digital presence and competitors.",
+    description: "Analyze your digital presence across traditional search and AI platforms.",
   },
   {
     step: "02",
     title: "Strategy",
-    description: "Custom marketing strategy aligned with your business goals.",
+    description: "Custom strategy covering SEO, AEO, paid, social, and AI discoverability.",
   },
   {
     step: "03",
     title: "Implementation",
-    description: "Execute campaigns across chosen channels and platforms.",
+    description: "Execute campaigns and optimize content for both humans and AI systems.",
   },
   {
     step: "04",
-    title: "Optimization",
-    description: "Continuous testing and refinement for better results.",
+    title: "AI Optimization",
+    description: "Structured data, schema markup, and content restructuring for AI consumption.",
   },
   {
     step: "05",
-    title: "Reporting",
-    description: "Regular performance reports with actionable insights.",
+    title: "Monitoring",
+    description: "Track performance across Google, AI search engines, and chatbot responses.",
   },
   {
     step: "06",
     title: "Scale",
-    description: "Expand successful campaigns and explore new opportunities.",
+    description: "Expand across new platforms — traditional and AI-powered — based on results.",
   },
 ];
 
 export default function DigitalMarketingPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Digital Marketing", href: "/services/digital-marketing" }]} />
+      <ServiceSchema name="Digital Marketing" description="Comprehensive digital marketing including SEO, AEO, AI search optimisation, PPC, social media, and LLM content strategy." url="/services/digital-marketing" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">
@@ -134,27 +184,27 @@ export default function DigitalMarketingPage() {
               {/* 1. Header */}
               <FadeIn>
                 <span className="text-sm font-mono text-primary uppercase tracking-wider">
-                  {"// Digital Marketing"}
+                  {"// Digital Marketing & AI Discovery"}
                 </span>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-4">
-                  Grow Your Online <span className="text-primary">Presence</span>
+                  Grow Everywhere — <span className="text-primary">Search & AI</span>
                 </h1>
                 <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
-                  Data-driven digital marketing strategies that increase visibility,
-                  drive traffic, and convert visitors into loyal customers.
+                  The way people find businesses is changing. We make sure you show up
+                  on Google, social media, and the new wave of AI-powered search engines.
                 </p>
               </FadeIn>
 
-              {/* 2. What We Offer */}
+              {/* 2. Digital Marketing */}
               <div className="mt-14">
                 <FadeIn>
                   <span className="text-sm font-mono text-primary uppercase tracking-wider">
-                    {"// What We Offer"}
+                    {"// Digital Marketing"}
                   </span>
                 </FadeIn>
 
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-                  {features.map((feature) => (
+                  {marketingFeatures.map((feature) => (
                     <StaggerItem key={feature.title}>
                       <div className="relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 group">
                         <feature.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
@@ -171,11 +221,41 @@ export default function DigitalMarketingPage() {
                 </StaggerContainer>
               </div>
 
-              {/* 3. Tech Stack */}
+              {/* 3. AI Discovery */}
               <div className="mt-14">
                 <FadeIn>
                   <span className="text-sm font-mono text-primary uppercase tracking-wider">
-                    {"// Tech Stack"}
+                    {"// AI Discovery & AEO"}
+                  </span>
+                  <p className="text-muted-foreground max-w-2xl text-sm mt-2 mb-6">
+                    AI assistants are the new front door. ChatGPT, Perplexity, Google AI — when
+                    users ask questions, your brand needs to be the answer.
+                  </p>
+                </FadeIn>
+
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {aiDiscoveryFeatures.map((feature) => (
+                    <StaggerItem key={feature.title}>
+                      <div className="relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 group">
+                        <feature.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                        <div className="relative">
+                          <feature.icon className="h-5 w-5 text-primary mb-3" />
+                          <h3 className="text-base font-bold text-foreground mb-1">{feature.title}</h3>
+                          <p className="text-sm text-muted-foreground font-mono">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+
+              {/* 4. Tech Stack */}
+              <div className="mt-14">
+                <FadeIn>
+                  <span className="text-sm font-mono text-primary uppercase tracking-wider">
+                    {"// Tools & Tech"}
                   </span>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {techStack.map((tech) => (
@@ -190,7 +270,7 @@ export default function DigitalMarketingPage() {
                 </FadeIn>
               </div>
 
-              {/* 4. Process */}
+              {/* 5. Process */}
               <div className="mt-14">
                 <FadeIn>
                   <span className="text-sm font-mono text-primary uppercase tracking-wider">
@@ -215,15 +295,15 @@ export default function DigitalMarketingPage() {
                 </StaggerContainer>
               </div>
 
-              {/* 5. CTA */}
+              {/* 6. CTA */}
               <div className="mt-14">
                 <FadeIn className="text-center">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                    Ready to Grow Your Business?
+                    Ready to Be Found Everywhere?
                   </h2>
                   <p className="text-muted-foreground mb-6 text-base">
-                    Let&apos;s create a marketing strategy that drives real results
-                    for your business.
+                    Let&apos;s make sure your brand shows up — on Google, on social,
+                    and when AI answers questions about your industry.
                   </p>
                   <Button asChild size="lg">
                     <Link href="/contact">

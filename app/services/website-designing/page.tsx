@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -118,6 +119,8 @@ const process = [
 export default function WebsiteDesigningPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Website Designing", href: "/services/website-designing" }]} />
+      <ServiceSchema name="Website Designing" description="Professional UI/UX design services creating stunning user-centered website designs using Figma and modern design principles." url="/services/website-designing" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">

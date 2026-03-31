@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -122,6 +123,8 @@ const processSteps = [
 export default function SaaSDevelopmentPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "SaaS Development", href: "/services/saas-development" }]} />
+      <ServiceSchema name="SaaS Development" description="End-to-end SaaS product development with multi-tenant architecture, billing, auth, dashboards, and analytics." url="/services/saas-development" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">
