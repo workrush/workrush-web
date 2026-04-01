@@ -11,6 +11,7 @@ import {
   Check,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -138,6 +139,8 @@ const whyUs = [
 export default function CloudDevOpsPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Cloud & DevOps", href: "/services/cloud-devops" }]} />
+      <ServiceSchema name="Cloud & DevOps" description="Cloud infrastructure, CI/CD pipelines, containerisation, and DevOps consulting on AWS, GCP, Azure, Docker, and Kubernetes." url="/services/cloud-devops" />
       <Header />
       <main>
         {/* ── Hero + Features ── */}
@@ -173,7 +176,7 @@ export default function CloudDevOpsPage() {
               <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-20">
                 {features.map((feature) => (
                   <StaggerItem key={feature.title}>
-                    <div className="group relative flex flex-col h-full p-6 md:p-8 bg-background border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_rgba(11,148,68,0.15)]">
+                    <div className="group relative flex flex-col h-full p-6 md:p-8 bg-background border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_-5px_rgba(11,148,68,0.15)]">
                       {/* Hover glow */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -222,7 +225,7 @@ export default function CloudDevOpsPage() {
 
               {/* Why Us */}
               <FadeIn className="mb-20">
-                <div className="bg-background border border-border rounded-2xl p-8 max-w-2xl">
+                <div className="bg-background border border-border rounded-lg p-8 max-w-2xl">
                   <h3 className="text-xl font-semibold mb-6">
                     Why Workrush for Cloud?
                   </h3>
@@ -254,7 +257,7 @@ export default function CloudDevOpsPage() {
               <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-20">
                 {processSteps.map((step) => (
                   <StaggerItem key={step.title}>
-                    <div className="p-6 bg-background border border-border rounded-2xl hover:border-primary/50 transition-colors">
+                    <div className="p-6 bg-background border border-border rounded-lg hover:border-primary/50 transition-colors">
                       <div className="inline-flex h-12 w-12 rounded-full bg-primary items-center justify-center text-sm font-mono text-primary-foreground mb-4">
                         {step.step}
                       </div>

@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -118,6 +119,8 @@ const process = [
 export default function AppDevelopmentPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "App Development", href: "/services/app-development" }]} />
+      <ServiceSchema name="App Development" description="Professional mobile app development for iOS and Android using Flutter, React Native, Swift, and Kotlin." url="/services/app-development" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">

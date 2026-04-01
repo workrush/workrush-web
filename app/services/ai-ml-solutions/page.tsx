@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -122,6 +123,8 @@ const processSteps = [
 export default function AIMLSolutionsPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "AI & ML Solutions", href: "/services/ai-ml-solutions" }]} />
+      <ServiceSchema name="AI & ML Solutions" description="Custom AI solutions including chatbots, LLM integrations, AI agents, RAG systems, computer vision, and workflow automation." url="/services/ai-ml-solutions" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">

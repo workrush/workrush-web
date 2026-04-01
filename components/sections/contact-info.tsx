@@ -1,31 +1,32 @@
 "use client";
 
-import { Mail, Phone, MapPin, Clock, ArrowUpRight, Send } from "lucide-react";
+import { Mail, MapPin, Clock, Send, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
 
+const offices = [
+  {
+    label: "London, UK",
+    address: siteConfig.contact.address,
+    email: siteConfig.contact.emailUK,
+    location: "United Kingdom",
+  },
+  {
+    label: "Noida, India",
+    address: siteConfig.contact.addressIndia,
+    email: siteConfig.contact.email,
+    location: "India",
+  },
+];
+
 const contactMethods = [
   {
-    icon: Mail,
-    label: "Email",
-    value: siteConfig.contact.email,
-    href: `mailto:${siteConfig.contact.email}`,
-    description: "Drop us a line anytime",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: siteConfig.contact.phone,
-    href: `tel:${siteConfig.contact.phone}`,
-    description: "Mon-Fri, 9am-6pm GMT",
-  },
-  {
-    icon: MapPin,
-    label: "Office",
-    value: siteConfig.contact.address,
-    href: null,
-    description: siteConfig.contact.location,
+    icon: CalendarDays,
+    label: "Schedule a Meeting",
+    value: "Book a 30-min call",
+    href: "https://cal.eu/workrush",
+    description: "Pick a slot that works for you",
   },
   {
     icon: Clock,
@@ -76,11 +77,9 @@ export function ContactInfo() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-base px-6 py-5 h-auto"
               >
-                <a
-                  href={`mailto:${siteConfig.contact.email}?subject=${emailSubject}&body=${emailBody}`}
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Us an Email
+                <a href="https://cal.eu/workrush" target="_blank" rel="noopener noreferrer">
+                  <CalendarDays className="mr-2 h-4 w-4" />
+                  Book a Meeting
                 </a>
               </Button>
               <Button
@@ -89,12 +88,44 @@ export function ContactInfo() {
                 variant="outline"
                 className="border-border text-foreground hover:bg-primary/10 hover:border-primary/50 text-base px-6 py-5 h-auto"
               >
-                <a href={`tel:${siteConfig.contact.phone}`}>
-                  <Phone className="mr-2 h-4 w-4" />
-                  Call Us Now
+                <a
+                  href={`mailto:${siteConfig.contact.emailUK}?subject=${emailSubject}&body=${emailBody}`}
+                >
+                  <Send className="mr-2 h-4 w-4" />
+                  Send Us an Email
                 </a>
               </Button>
             </div>
+          </FadeIn>
+
+          {/* Office Cards */}
+          <FadeIn delay={0.15} className="mb-8">
+            <span className="inline-block text-sm font-mono text-primary mb-4 uppercase tracking-wider">
+              {"// Our Offices"}
+            </span>
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {offices.map((office) => (
+                <StaggerItem key={office.label}>
+                  <div className="group relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 h-full">
+                    <MapPin className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                    <div className="relative">
+                      <div className="text-base font-bold text-foreground mb-2">
+                        {office.label}
+                      </div>
+                      <div className="text-sm text-muted-foreground mb-2">
+                        {office.address}
+                      </div>
+                      <a
+                        href={`mailto:${office.email}`}
+                        className="text-sm text-primary hover:underline font-mono"
+                      >
+                        {office.email}
+                      </a>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </FadeIn>
 
           {/* Contact Cards Grid */}
@@ -102,7 +133,6 @@ export function ContactInfo() {
             {contactMethods.map((method) => {
               const content = (
                 <div className="group relative overflow-hidden p-5 border border-border rounded-xl hover:border-primary/50 transition-all duration-300 h-full">
-                  {/* Background icon */}
                   <method.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
                   <div className="relative">
                     <div className="text-xs font-mono text-muted-foreground mb-1 uppercase tracking-wider">

@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -122,6 +123,8 @@ const process = [
 export default function WebDevelopmentPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Web Development", href: "/services/web-development" }]} />
+      <ServiceSchema name="Web Development" description="Professional web development using React, Next.js, Node.js, and modern technologies for scalable high-performance web applications." url="/services/web-development" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">

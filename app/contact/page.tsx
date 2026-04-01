@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact",
   },
+  openGraph: {
+    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Contact Workrush" }],
+  },
 };
 
 export default function ContactPage() {

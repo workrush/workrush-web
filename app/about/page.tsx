@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Lightbulb, Target, Users, Heart } from "lucide-react";
+import { ArrowRight, Lightbulb, Target, Users, Heart, Handshake } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "30+", label: "Happy Clients" },
+  { value: "150+", label: "Projects Delivered" },
+  { value: "35+", label: "Happy Clients" },
   { value: "5+", label: "Years Experience" },
   { value: "99%", label: "Client Satisfaction" },
 ];
@@ -31,26 +31,26 @@ const values = [
   {
     title: "Innovation",
     description:
-      "Staying ahead of technology trends to deliver cutting-edge solutions.",
+      "Help in strategic ideation and building future-proof solutions.",
     icon: Lightbulb,
+  },
+  {
+    title: "Your CTO & Tech Org",
+    description:
+      "You get a CTO and the complete tech organisation, without the overhead.",
+    icon: Users,
   },
   {
     title: "Quality",
     description:
-      "Every line of code and every pixel crafted with excellence.",
+      "Scalable, future-proof solutions crafted with excellence at every layer.",
     icon: Target,
   },
   {
-    title: "Collaboration",
+    title: "Founder Handholding",
     description:
-      "Treating your goals as our own and building lasting partnerships.",
-    icon: Users,
-  },
-  {
-    title: "Integrity",
-    description:
-      "Transparency and honesty in everything we do, on time and on budget.",
-    icon: Heart,
+      "From brainstorming to go-to-market and post-delivery growth support.",
+    icon: Handshake,
   },
 ];
 
@@ -75,13 +75,12 @@ export default function AboutPage() {
                   {"// About"}
                 </span>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                  Building Digital Products That{" "}
-                  <span className="text-primary">Matter</span>
+                  Building Digital{" "}
+                  <span className="text-primary">DNA at Scale</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  We&apos;re a team of passionate technologists, designers, and
-                  strategists dedicated to helping businesses succeed in the
-                  digital age.
+                  Helping businesses grow digitally and establish alternate
+                  revenue streams. We are your technology partners.
                 </p>
               </FadeIn>
 
@@ -93,22 +92,27 @@ export default function AboutPage() {
                 <div className="grid lg:grid-cols-2 gap-10 items-start">
                   <div className="space-y-4 text-muted-foreground text-base leading-relaxed">
                     <p>
-                      Workrush was founded with a simple mission: to help
-                      businesses transform their ideas into successful digital
-                      products. We saw too many great ideas fail due to poor
-                      execution, and we set out to change that.
+                      Founded in July 2020 with offices in London, UK and
+                      Noida, India, Workrush was built on a simple belief:
+                      every founder deserves a tech partner who cares as much
+                      about their product as they do.
                     </p>
                     <p>
-                      Today, we&apos;re proud to be a trusted partner for
-                      businesses across the UK and Europe. From startups
-                      launching their first MVP to enterprises scaling their
-                      operations, we bring the same passion and dedication to
-                      every project.
+                      <span className="text-foreground font-semibold">Our Mission:</span>{" "}
+                      Helping businesses grow digitally and establish alternate
+                      revenue streams. We are technology partners — not just
+                      vendors.
                     </p>
                     <p>
-                      Our team combines technical expertise with creative
-                      thinking to deliver solutions that not only work but
-                      delight users and drive business growth.
+                      <span className="text-foreground font-semibold">Our Vision:</span>{" "}
+                      Become the trusted tech partner for founders across
+                      Europe and Asia. Helping an idea become reality.
+                    </p>
+                    <p>
+                      From startups launching their first MVP to enterprises
+                      scaling globally, we bring strategic ideation,
+                      brainstorming on go-to-market, and post-delivery growth
+                      support to every engagement.
                     </p>
                   </div>
 

@@ -137,20 +137,25 @@ export function Process() {
               <div className="space-y-5">
                 {steps.map((step) => (
                   <StaggerItem key={step.title}>
-                    <div className="relative flex gap-4">
+                    <div className="relative flex items-start gap-0">
                       {/* Node */}
                       <div className="relative z-10 h-10 w-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                         <span className="text-sm font-bold text-primary-foreground">{step.number}</span>
                       </div>
-                      {/* Content card with border */}
-                      <div className="flex-1 border border-border rounded-xl p-4 bg-card/50">
-                        <div className="flex items-center gap-2 mb-2">
-                          <step.icon className="h-4 w-4 text-primary" />
-                          <h3 className="font-semibold">{step.title}</h3>
+                      {/* Horizontal connector */}
+                      <div className="w-4 h-0.5 bg-primary/50 self-center shrink-0 mt-[1px]" />
+                      {/* Content card with bg faded icon */}
+                      <div className="group flex-1 relative overflow-hidden border border-border rounded-xl p-4 bg-card/50 hover:border-primary/50 transition-all duration-300">
+                        <step.icon className="absolute -bottom-2 -right-2 h-16 w-16 text-primary/50 group-hover:text-primary/80 transition-colors" />
+                        <div className="relative">
+                          <div className="flex items-center gap-2 mb-2">
+                            <step.icon className="h-4 w-4 text-primary" />
+                            <h3 className="font-semibold">{step.title}</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {step.description}
+                          </p>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {step.description}
-                        </p>
                       </div>
                     </div>
                   </StaggerItem>

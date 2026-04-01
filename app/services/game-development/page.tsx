@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -120,6 +121,8 @@ const process = [
 export default function GameDevelopmentPage() {
   return (
     <>
+            <BreadcrumbSchema items={[{ name: "Services", href: "/services" }, { name: "Game Development", href: "/services/game-development" }]} />
+      <ServiceSchema name="Game Development" description="Professional game development for mobile, desktop, and web using Unity, Unreal Engine, and custom game engines." url="/services/game-development" />
       <Header />
       <main>
         <section className="py-20 md:py-28 bg-background">
