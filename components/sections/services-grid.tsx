@@ -58,10 +58,10 @@ const services = [
   },
   {
     title: "Game Development",
-    description: "Engaging games for mobile, desktop, and web. Unity, Unreal, and custom engines.",
+    description: "Engaging games for mobile, desktop, and web. Unity, Unreal, CSS/HTML5, and custom engines.",
     icon: Gamepad2,
     href: "/services/game-development",
-    tags: ["Unity", "Unreal", "Mobile"],
+    tags: ["Unity", "Unreal", "CSS Games", "HTML5"],
     highlight: false,
   },
   {
@@ -85,7 +85,7 @@ const services = [
     description: "SEO, PPC, social media, AEO, and AI search optimization to grow your presence everywhere — traditional and AI.",
     icon: TrendingUp,
     href: "/services/digital-marketing",
-    tags: ["SEO", "AEO", "AI Search", "PPC"],
+    tags: ["SEO", "AEO", "Social Media", "PPC"],
     highlight: true,
   },
 ];
