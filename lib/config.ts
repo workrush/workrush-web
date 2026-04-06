@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Workrush",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://workrush.co.uk",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://workrush.co.uk/en-gb",
   tagline: "Building Digital DNA at Scale",
   description:
     "Workrush specializes in cutting-edge IT solutions, including software development, cloud computing, AI, and digital transformation. From MVP to enterprise, we ship fast without compromising quality.",
