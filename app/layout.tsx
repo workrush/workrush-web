@@ -72,6 +72,15 @@ export const metadata: Metadata = {
     description: "From MVP to enterprise, we ship fast without compromising quality. 150+ projects delivered.",
     images: ["/og-image.svg"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   alternates: {
     canonical: "/",
   },
