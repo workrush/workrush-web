@@ -12,6 +12,7 @@ import {
 import { Header } from "@/components/layout/header";
 import { BreadcrumbSchema, ServiceSchema } from "@/components/structured-data";
 import { Footer } from "@/components/layout/footer";
+import { GamesSection } from "@/components/games/games-section";
 import { Button } from "@/components/ui/button";
 import {
   FadeIn,
@@ -70,6 +71,12 @@ const features = [
       "Real-time multiplayer experiences with matchmaking and social features.",
     icon: Gamepad2,
   },
+  {
+    title: "CSS & HTML5 Games",
+    description:
+      "Lightweight browser games built with CSS animations and HTML5 — no downloads, instant play on any device.",
+    icon: Globe,
+  },
 ];
 
 const techStack = [
@@ -83,6 +90,8 @@ const techStack = [
   "PlayFab",
   "Firebase",
   "WebGL",
+  "CSS Games",
+  "HTML5",
 ];
 
 const process = [
@@ -218,7 +227,10 @@ export default function GameDevelopmentPage() {
                 </StaggerContainer>
               </div>
 
-              {/* 5. CTA */}
+              {/* 5. Interactive Games */}
+              <GamesSection />
+
+              {/* 6. CTA */}
               <div className="mt-14">
                 <FadeIn className="text-center">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -229,9 +241,14 @@ export default function GameDevelopmentPage() {
                     players will love.
                   </p>
                   <Button asChild size="lg">
-                    <Link href="/contact">
-                      Start Your Project
+                    <a href="https://cal.eu/workrush" target="_blank" rel="noopener noreferrer">
+                      Experience Our Games
                       <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="outline">
+                    <Link href="/portfolio">
+                      View Portfolio
                     </Link>
                   </Button>
                 </FadeIn>

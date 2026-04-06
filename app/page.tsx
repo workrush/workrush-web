@@ -7,6 +7,7 @@ import { TechStack } from "@/components/sections/tech-stack";
 import { Stats } from "@/components/sections/stats";
 import { Process } from "@/components/sections/process";
 import { CTA } from "@/components/sections/cta";
+import { TechPlayground } from "@/components/sections/tech-playground";
 import { ParticleWrapper } from "@/components/effects/particle-wrapper";
 import { CursorGlow } from "@/components/effects/cursor-glow";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Stats />
         <Process />
         <TechStack />
+        <TechPlayground />
         <CTA />
       </main>
       <Footer />
