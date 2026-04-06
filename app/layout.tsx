@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.svg",
+        url: "./og-image.svg",
         width: 1200,
         height: 630,
         alt: "Workrush - Building Digital DNA at Scale",
@@ -70,17 +70,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Workrush | Building Digital DNA at Scale",
     description: "From MVP to enterprise, we ship fast without compromising quality. 150+ projects delivered.",
-    images: ["/og-image.svg"],
+    images: ["./og-image.svg"],
   },
-  icons: {
-    icon: [
-      { url: "/icon.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
+  // app/icon.png and app/apple-icon.png are auto-served by Next.js at /en-gb/icon.png
   alternates: {
     canonical: "/",
   },

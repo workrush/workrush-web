@@ -6,7 +6,7 @@ import { CalendarDays, ArrowRight } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/effects/motion";
 import { Button } from "@/components/ui/button";
 
-const basePath = "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 interface Client {
   name: string;
