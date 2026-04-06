@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "/privacy",
   },
   openGraph: {
-    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Workrush Privacy Policy" }],
+    images: [{ url: "./og-image.svg", width: 1200, height: 630, alt: "Workrush Privacy Policy" }],
   },
 };
 

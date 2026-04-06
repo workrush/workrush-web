@@ -42,7 +42,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logo-h.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/logo-h.png`}
             alt="Workrush"
             width={160}
             height={40}

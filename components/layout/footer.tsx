@@ -41,7 +41,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-4 space-y-5">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-h.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/logo-h.png`}
                 alt="Workrush"
                 width={140}
                 height={35}

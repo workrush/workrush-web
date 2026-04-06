@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FadeIn } from "@/components/effects/motion";
 
-const basePath = "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 interface Client {
   name: string;
