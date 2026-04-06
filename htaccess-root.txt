@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.workrush\.co\.uk [NC]
+  RewriteRule ^(.*)$ https://workrush.co.uk/$1 [L,R=301]
+
+  # Redirect domain root to /en-gb/
+  RewriteRule ^$ /en-gb/ [L,R=301]
+
+  # Serve /en-gb/robots.txt when root robots.txt is requested
+  RewriteRule ^robots\.txt$ /en-gb/robots.txt [L,R=301]
+
+  # Serve /en-gb/sitemap.xml when root sitemap is requested
+  RewriteRule ^sitemap\.xml$ /en-gb/sitemap.xml [L,R=301]
+</IfModule>
